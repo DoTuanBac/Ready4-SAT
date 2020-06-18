@@ -9,7 +9,7 @@ import AnalyticsScreen from '../screens/AnalyticsScreen'
 import SchoolsScreen from '../screens/SchoolsScreen'
 import TestScreen from '../screens/TestScreen'
 import VocabScreen from '../screens/VocabScreen'
-
+import VocabDetailScreen from '../screens/VocabDetailScreen'
 const Stack = createStackNavigator();
 
 export default function HomeStack(props) {
@@ -73,6 +73,10 @@ export default function HomeStack(props) {
       <Stack.Screen 
         name="Vocab" 
         component={VocabScreen}
+      />
+           <Stack.Screen 
+        name="Learn" 
+        component={VocabDetailScreen}
       />
     </Stack.Navigator>
   );
