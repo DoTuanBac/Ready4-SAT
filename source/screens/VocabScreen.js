@@ -1,10 +1,27 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React,{ useState } from 'react'
+import { View, Text,StyleSheet,TouchableOpacity,FlatList, } from 'react-native'
+import VocabCategories from '../components/Vocab/VocabCategories'
+import {Word} from '../data/word'
+export default function VocabScreen({navigation}){
 
-export default function VocabScreen(){
+
     return(
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <Text>Vocab Screen</Text>
-        </View>
-    )
+        <View>
+               <FlatList 
+        data={Word}
+        renderItem={({ item }) => <VocabCategories navigation={navigation} item={item} ></VocabCategories>}
+        keyExtractor={item => item.id}
+      />
+    
+
+    </View>
+    );
+
+
 }
+
+
+const styles = StyleSheet.create({
+
+
+})
