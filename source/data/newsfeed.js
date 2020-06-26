@@ -1,0 +1,38 @@
+export const newsfeed = [
+    {
+        id: 1,
+        schoolName: "School 1",
+        date: "12/02/2020",
+        title: "Truong dai hoc Ha vdojfg ghbbnlk vbvgvhb gfnb gfn  gfbg abc",
+        image: 'uri',
+        icon: 'abc',
+        bookmark: false,
+    },
+    {
+        id: 2,
+        schoolName: "School 2",
+        date: "12/02/2020",
+        title: "abc",
+        image: 'uri',
+        icon: 'abc',
+        bookmark: false,
+    },
+    {
+        id: 3,
+        schoolName: "School 3",
+        date: "12/02/2020",
+        title: "abc",
+        image: 'uri',
+        icon: 'abc',
+        bookmark: false,
+    },
+    {
+        id: 4,
+        schoolName: "School 4",
+        date: "12/02/2020",
+        title: "abc",
+        image: 'uri',
+        icon: 'abc',
+        bookmark: false,
+    },
+]
