@@ -2,47 +2,129 @@ export const  Word = [
     {
       id: 1,
       name: 'Basic words',
-      item:[
+      categories:[
           {
               id:1,
               name:'Basic words I',
-              mastered:2,
-              allMaster:50,
               words:[
                   {
                   id:1,
-                  }
-              ]
+                  word:"hello",
+                  mastered:0,
+                  },
+                  {
+                    id:2,
+                    word:"temp",
+                    mastered:1,
+                    },
+                    {
+                      id:3,
+                      word:"wish",
+                      mastered:1,
+                      
+                      },
+                      {
+                        id:3,
+                        word:"wish",
+                        mastered:1,
+                        
+                        },
+              ],
           },
           {
             id:2,
             name:'Basic words II',
-            mastered:12,
-            allMaster:70,
+            words:[
+              {
+              id:1,
+              word:"hello",
+              mastered:1,
+              },
+              {
+                id:2,
+                word:"temp",
+                mastered:1,
+                },
+                {
+                  id:3,
+                  word:"wish",
+                  mastered:1,
+                  
+                  },
+          ],
+
         },
         {
             id:3,
             name:'Basic words III',
-            mastered:152,
-            allMaster:710,
+            words:[
+              {
+              id:1,
+              word:"hello",
+              mastered:1,
+              },
+              {
+                id:2,
+                word:"temp",
+                mastered:1,
+                },
+                {
+                  id:3,
+                  word:"wish",
+                  mastered:1,
+                  
+                  },
+          ],
         }
       ],
     },
     {
       id: 2,
       name: 'Hard words',
-      item:[
+      categories:[
         {
             id:1,
             name:'Hard words I',
-            mastered:8,
-            allMaster:40,
+            words:[
+              {
+              id:1,
+              word:"hello",
+              mastered:1,
+              },
+              {
+                id:2,
+                word:"temp",
+                mastered:1,
+                },
+                {
+                  id:3,
+                  word:"wish",
+                  mastered:1,
+                  
+                  },
+          ],
         },
         {
           id:2,
           name:'Hard words II',
-          mastered:60,
-          allMaster:120,
+          words:[
+            {
+            id:1,
+            word:"hello",
+            mastered:1,
+            },
+            {
+              id:2,
+              word:"temp",
+              mastered:1,
+              },
+              {
+                id:3,
+                word:"wish",
+                mastered:1,
+                
+                },
+        ],
       }
     ],
     },

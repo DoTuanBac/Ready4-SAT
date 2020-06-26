@@ -1,18 +1,18 @@
 import React,{ useState } from 'react'
 import { View, Text,StyleSheet,TouchableOpacity,FlatList, } from 'react-native'
 import ProgressBar from '../Home/ProgressBar'
-import {getMasterediTem,getPercentiTem} from './VocabCaculator'
+import {getMasteredWords,getPercentWords} from './VocabCaculator'
 export default function VocabItem(props){
   
   
     return(
     
 
-            <TouchableOpacity style={styles.listbox} onPress={() => props.navigation.navigate('Learn')} >
-            <Text style={styles.basicWord2}>{props.item.name}</Text>
-            <Text style={styles.mastered2}>{getMasterediTem(props.item)}</Text>
+            <TouchableOpacity style={styles.listbox} onPress={() => props.navigation.navigate('Learn',{words:props.words})} >
+            <Text style={styles.basicWord2}>{props.name}</Text>
+            <Text style={styles.mastered2}>{getMasteredWords(props.words)}</Text>
             <View style={styles.progressBarContainer}>
-                <ProgressBar percent={getPercentiTem(props.item)}/>
+                <ProgressBar percent={getPercentWords(props.words)}/>
             </View>  
             </TouchableOpacity>
        
