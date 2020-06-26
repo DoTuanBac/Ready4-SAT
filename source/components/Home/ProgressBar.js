@@ -10,10 +10,10 @@ export default function ProgressBar(props){
             borderRadius: 4,
             backgroundColor: 'white',
             flexDirection: 'row',
-            alignItems: 'center'
+            alignItems: 'center',
         }}>
             <View style={{
-                backgroundColor: 'orange',
+                backgroundColor: '#F1D513',
                 width: props.percent,
                 height: 6,
                 borderRadius: 3

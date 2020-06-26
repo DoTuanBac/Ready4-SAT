@@ -9,6 +9,8 @@ import AnalyticsScreen from '../screens/AnalyticsScreen'
 import SchoolsScreen from '../screens/SchoolsScreen'
 import TestScreen from '../screens/TestScreen'
 import VocabScreen from '../screens/VocabScreen'
+import MyProfileScreen from '../screens/MyProfileScreen'
+import PracticeScreen from '../screens/PracticeScreen'
 
 const Stack = createStackNavigator();
 
@@ -19,13 +21,14 @@ export default function HomeStack(props) {
         name="Home" 
         component={HomeScreen} 
         options={{
-          ...styles,
+          headerStyle: {backgroundColor: '#05B5CC'},
+          title: '',
           headerLeft: () => 
             <TouchableOpacity
               onPress={() => props.navigation.openDrawer()}
               style={{marginLeft: 16}}
             >
-              <Feather name='menu' size={24} color={'black'}/>
+              <Feather name='menu' size={24} color={'white'}/>
             </TouchableOpacity>,
           headerRight: () => 
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -74,12 +77,14 @@ export default function HomeStack(props) {
         name="Vocab" 
         component={VocabScreen}
       />
+      <Stack.Screen 
+        name="MyProfile" 
+        component={MyProfileScreen}
+      />
+      <Stack.Screen 
+        name="Practice" 
+        component={PracticeScreen}
+      />
     </Stack.Navigator>
   );
-}
-
-const styles = {
-  headerStyle: {
-    backgroundColor: 'white'
-  }
 }
