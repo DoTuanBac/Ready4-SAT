@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 
 export default function ProgressBar(props){
     return(
+
      
          <View style={ styles.ProgressBar}>
             <View style={ {

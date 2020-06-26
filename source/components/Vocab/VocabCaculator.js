@@ -1,36 +1,59 @@
-export function getMastered(item)
+export function getMasteredCategories(categories)
 {
-    var sumMastered=0;
-    var sumAllMaster=0;
-    for(let i of item)
-    {
-        sumMastered=sumMastered+i.mastered;
-        sumAllMaster=sumAllMaster+i.allMaster;
-    }
-    return sumMastered+"/"+sumAllMaster;
+    var sumMastered=countMasteredCategory(categories);
+    var sumCategories=Count(categories);
+   
+    return sumMastered+"/"+sumCategories;
   
 }
-export function getPercent(item)
+export function getPercentCategories(categories)
 {
-    var sumMastered=0;
-    var sumAllMaster=0;
-    for(let i of item)
-    {
-        sumMastered=sumMastered+i.mastered;
-        sumAllMaster=sumAllMaster+i.allMaster;
-    }
-    return sumMastered*100/sumAllMaster+"%";
+    var sumMastered=countMasteredCategory(categories);
+    var sumCategories=Count(categories);
+ 
+    return sumMastered*100/sumCategories+"%";
 }
 
-export function getMasterediTem(item)
+export function getMasteredWords(words)
 {
-   
-    return item.mastered+"/"+item.allMaster;
+    var sumMastered= CountMasteredWord(words);
+    var sumWords=Count(words);
+    return sumMastered+"/"+sumWords;
   
 }
-export function getPercentiTem(item)
+export function getPercentWords(words)
 {
-   
-    return item.mastered*100/item.allMaster+"%"
+    var sumMastered= CountMasteredWord(words);
+    var sumWords=Count(words);
+    return sumMastered*100/sumWords+"%"
   
+}
+ function Count(items)
+{
+    var x=0;
+    for(let i of items)
+    {
+        x++;
+    }
+    return x;
+}
+ function CountMasteredWord(words)
+{
+    var x=0;
+    for(let i of words)
+    {
+        if(i.mastered==1)
+        x++;
+    }
+    return x;
+}
+function countMasteredCategory(categories)
+{
+    var x=0;
+    for(let i of categories)
+    {
+        if(Count(i.words)==CountMasteredWord(i.words))
+        x++;
+    }
+    return x;
 }

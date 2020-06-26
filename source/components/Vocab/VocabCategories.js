@@ -2,26 +2,26 @@ import React,{ useState } from 'react'
 import { View, Text,StyleSheet,TouchableOpacity,FlatList, } from 'react-native'
 import ProgressBar from '../Home/ProgressBar'
 import VocabItem from './VocabItem'
-import {getMastered,getPercent} from './VocabCaculator'
+import {getMasteredCategories,getPercentCategories} from './VocabCaculator'
 export default function VocabCategories(props){
   
     const [count, setCount] = useState(0);
 
     if(count%2==1)
     return(
-        <View style={styles.fullbox}>
+        
         <TouchableOpacity  style={styles.box} onPress={() => setCount(count+1)} >
            
             <Text style={styles.basicWord}>{props.item.name}</Text>
-        <Text style={styles.mastered}>{getMastered(props.item.item)}</Text>
+        <Text style={styles.mastered}>{getMasteredCategories(props.item.categories)}</Text>
             <View style={styles.progressBarContainer}>
-            <ProgressBar percent={getPercent(props.item.item)}/>
+            <ProgressBar percent={getPercentCategories(props.item.categories)}/>
             </View>  
             <View style={styles.listbox}>
             <FlatList 
-        data={props.item.item}
+        data={props.item.categories}
         horizontal={true}
-        renderItem={({ item }) => <VocabItem navigation={props.navigation} item={item}/>}
+        renderItem={({ item }) => <VocabItem navigation={props.navigation} name={item.name} words={item.words}/>}
         keyExtractor={item => item.id}
       />
             
@@ -30,35 +30,30 @@ export default function VocabCategories(props){
         </View>
 
         </TouchableOpacity>
-        </View>
+      
     );
     if(count%2==0)
     return(
-        <View style={styles.fullbox}>
+        
         <TouchableOpacity  style={styles.box} onPress={() => setCount(count+1)} >
             
             <Text style={styles.basicWord}>{props.item.name}</Text>
-            <Text style={styles.mastered}>{getMastered(props.item.item)}</Text>
+            <Text style={styles.mastered}>{getMasteredCategories(props.item.categories)}</Text>
             <View style={styles.progressBarContainer}>
-                <ProgressBar percent={getPercent(props.item.item)}/>
+                <ProgressBar percent={getPercentCategories(props.item.categories)}/>
             </View>  
          
      
 
         </TouchableOpacity>
-        </View>
+     
     );
 
 
 }
 
 const styles = StyleSheet.create({
-    fullbox:
-    {
-        justifyContent: 'center',
-        alignItems: 'center',
-     
-    },
+ 
     listbox:
     {
         width:'90%',
@@ -69,8 +64,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding:30,
         backgroundColor: '#2B83B2',
-        width:'90%',
+        width:'100%%',
         marginVertical:20,
+        borderRadius:4,
     },
 
     progressBarContainer: {
