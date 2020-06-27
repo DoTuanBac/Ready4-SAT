@@ -35,9 +35,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical:30,
         backgroundColor:'white',
-        borderRadius: 4,
-        borderColor:'green',
-        borderWidth: 1,
+        borderRadius: 10,
         margin:20,
     },
     basicWord2:
