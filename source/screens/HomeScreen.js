@@ -6,6 +6,10 @@ import Unit from '../components/Home/Unit'
 import UnitList from '../components/Home/UnitList'
 import ProgressBar from '../components/Home/ProgressBar'
 
+
+import {Test} from '../data/test'
+
+
 export default function HomeScreen({navigation}){
     const [isChange, setChange] = useState(false)
     const [isUnitOpen, setUnitOpen] = useState(false)
@@ -72,7 +76,7 @@ export default function HomeScreen({navigation}){
                 <View style={{backgroundColor: 'white'}}>
                     <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
                         <TouchableOpacity onPress={() => setUnitOpen(!isUnitOpen)}>
-                            <Unit style={'square'} name='Accessment Test'/>
+                            <Unit style={'square'} name='Accessment Test' />
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => setUnitOpen(!isUnitOpen)}>
                             <Unit style={'circle'} name='Arithmetic'/>
@@ -83,7 +87,7 @@ export default function HomeScreen({navigation}){
                     </View>
                     {
                         (isUnitOpen) &&
-                        <UnitList navigation={navigation} skill={true}/>
+                        <UnitList navigation={navigation} questions={Test} skill={true}/>
                     }
                 </View> : 
                 <View>
@@ -113,7 +117,7 @@ export default function HomeScreen({navigation}){
                                 
                                 {
                                     (item.isOpen) &&
-                                    <UnitList navigation={navigation} skill={false}/>
+                                    <UnitList navigation={navigation}  questions={Test} skill={false}/>
                                 }
                             </TouchableOpacity>
                         )}

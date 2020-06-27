@@ -4,9 +4,9 @@ import Avatar from './Avatar'
 export default function TopLeaderBoard(props){
     function getSize(top)
     {
-        if(top==1) return 120;
-        else if(top==2) return 90;
-        else if(top==3)  return 60;
+        if(top==1) return 100;
+        else if(top==2) return 80;
+        else if(top==3)  return 80;
     }
     return(
         <View style={styles.BoxTopDetail}>
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 
     BoxTopDetail:
     {
+        marginTop:20, 
         alignItems: 'center',
     },
     contentText:

@@ -14,14 +14,14 @@ export default function UnitList(props){
                 <View></View>
             }
             <FlatList 
-                data={[{id: 1, title: 'item 1'},{id: 2, title: 'item 2'},{id: 3, title: 'item 3'}]}
+                data={props.questions}
                 renderItem={({item}) => (
                     <TouchableOpacity
                         style={styles.item}
-                        onPress={() => props.navigation.navigate('Practice')}
+                        onPress={() =>props.navigation.navigate('Question',{questions:item.questions})}
                     >
                         <View style={styles.center}>
-                            <Text style={{fontSize: 15, color:'#05B5CC'}}>{item.title}</Text>
+                            <Text style={{fontSize: 15, color:'#05B5CC'}}>{item.name}</Text>
                             <Entypo name='documents' color='#05B5CC' size={50}/>
                         </View>
                     </TouchableOpacity>    
