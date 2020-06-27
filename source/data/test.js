@@ -6,13 +6,13 @@ export const  Test = [
         {
         id:1,
         title:"bài 1",
-        question:"1+1=?",
+        question:"Joshua believed his bicycle to be the best \nWhat is type 'Believed' word?",
         mastered:0,
         answers : [
-          {label: 2, value: 0 },
-          {label: 3, value: 1 },
-          {label: 4, value: 2 },
-          {label: 7, value: 3 },
+          {label: "Noun", value: 0 },
+          {label: "Pronoun", value: 1 },
+          {label: "Adjective", value: 2 },
+          {label: "Verb", value: 3 },
         ],
         correct:0,
         

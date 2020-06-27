@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
  
     fullbox:
     {
-
+backgroundColor:"white",
         flex:1,
     },
   

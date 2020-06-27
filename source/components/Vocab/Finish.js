@@ -1,18 +1,17 @@
 import React from 'react'
 import { View, Text,TouchableOpacity,StyleSheet } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Finish(props){
     return(
-        <View style={styles.fullbox}>
+        <LinearGradient style={styles.fullbox}  colors={[ '#0a566b','#14ccff']}>
       
         <Text style={styles.score}>{props.score}/{props.sum}</Text>
            <TouchableOpacity style={styles.finishButton} onPress={() => props.navigation.navigate(props.route)}> 
-    <Text style={styles.finishText}>Finish</Text>
-
-     
+         <Text style={styles.finishText}>Finish</Text>
         </TouchableOpacity>  
 
-  </View>
+  </LinearGradient>
     )
 }
 
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flex:1,
-        backgroundColor:'#2B83B2',
+
     },
 
  
@@ -32,15 +31,19 @@ const styles = StyleSheet.create({
  score:
 {
 color:"white",
-padding:20,
+padding:50,
 fontSize:100,
 fontWeight:"bold",
 
 },
 finishButton:
 {
-    backgroundColor:"#6b9ed6",
+   borderColor:'white',
+   borderWidth:1,
     borderRadius: 4,
+    width:'90%',
+    textAlign:"center",
+    justifyContent: 'center',
 
 },
 finishText:

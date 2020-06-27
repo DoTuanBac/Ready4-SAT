@@ -9,8 +9,8 @@ export default function VocabDetail(props){
 
           <TouchableOpacity onPress={() => setCount(count+1)}  style={styles.box}>
            <Text style={styles.word} >{props.word.word}</Text>
-           <Text style={styles.adj}>Adj</Text>
-           <Text style={styles.pronounce}>phát âm</Text>
+           <Text style={styles.adj}>{props.word.category}</Text>
+           <Text style={styles.pronounce}>{props.word.pronounce}</Text>
            <Text style={styles.tap}>Tap to see meaning</Text>
        
           </TouchableOpacity>  
@@ -23,12 +23,12 @@ export default function VocabDetail(props){
           <TouchableOpacity onPress={() => setCount(count+1)}  style={styles.box2}>
             
             <View style={styles.title}><Text style={styles.word2} >{props.word.word}</Text></View>
-           <Text style={styles.adj}>Adj</Text>
-           <Text style={styles.pronounce} >phát âm</Text>
-           <Text style={styles.meaning}>meaning1, meaning2</Text>
+           <Text style={styles.adj}>{props.word.category}</Text>
+           <Text style={styles.pronounce} >{props.word.pronounce}</Text>
+           <Text style={styles.meaning}>{props.word.explain}</Text>
            <View style={styles.context}>
-           <Text style={styles.contextTitle}>Context</Text>
-           <View><Text >dmasiodjas dasiodo n dioasn</Text></View>
+           <Text style={styles.contextTitle}>{props.word.context}</Text>
+           <View><Text >{props.word.explainContext}</Text></View>
            </View>
           </TouchableOpacity>  
 
