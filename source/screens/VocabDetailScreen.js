@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import { View, Text,StyleSheet,TouchableOpacity,FlatList} from 'react-native'
 import VocabDetail from '../components/Vocab/VocabDetail'
-import Finish from '../components/Vocab/finish'
+import Finish from '../components/Vocab/Finish'
 
 export default function VocabDetailScreen({route,navigation}){
     const [count, setCount] = useState(0);
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         width:'100%',
         borderBottomEndRadius: 4,
         padding:10,
-        backgroudColor: 'white',
+
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',

@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     circle: {
         width: 90,
         height: 90,
-        borderRadius: '50%',
+        borderRadius: 100,
         backgroundColor: '#F1D513',
         marginHorizontal: 15,
         marginTop: 20,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     quiz: {
         width: 48,
         height: 48,
-        borderRadius: '50%',
+        borderRadius: 100,
         borderColor: 'white',
         borderWidth: 3,
         transform: [{rotate: '45deg'}],

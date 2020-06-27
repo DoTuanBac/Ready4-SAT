@@ -29,7 +29,6 @@ ProgressBar:
     borderWidth: 1,
     borderColor: 'white',
     borderRadius: 4,
-    backgroundColor: '',
     flexDirection: 'row',
     alignItems: 'center',
 },

@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import { View, Text,StyleSheet,TouchableOpacity } from 'react-native'
 import TestDetail from '../components/Test/TestDetail'
-import Finish from '../components/Vocab/finish'
+import Finish from '../components/Vocab/Finish'
 export default function TestDetailScreen({route,navigation}){
     const [count, setCount] = useState(0);
     const [check, setCheck ]= useState(false)
@@ -64,7 +64,6 @@ backgroundColor:"white",
         width:'100%',
         borderBottomEndRadius: 4,
         padding:10,
-        backgroudColor: 'white',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',

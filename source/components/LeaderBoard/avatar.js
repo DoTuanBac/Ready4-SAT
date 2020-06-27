@@ -7,7 +7,7 @@ export default function Avatar(props){
         style={{
             width: props.size, 
             height:  props.size,
-            borderRadius:'100%', 
+            borderRadius:100, 
     }}
          source={{
            uri: props.uri,
