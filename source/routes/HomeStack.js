@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity, View } from 'react-native';
-import {Feather} from '@expo/vector-icons'
+import { Feather, SimpleLineIcons, FontAwesome } from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
 import LeaderboardScreen from '../screens/LeaderboardScreen'
 import NewsFeedScreen from '../screens/NewsFeedScreen'
@@ -36,21 +36,21 @@ export default function HomeStack(props) {
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <TouchableOpacity
                 onPress={() => props.navigation.navigate('Leaderboard')}
-                style={{marginRight: 16}}
+                style={{marginRight: 16, paddingHorizontal: 4}}
               >
-                <Feather name='search' size={24} color={'black'}/>
+                <SimpleLineIcons name='trophy' size={24} color={'white'}/>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => props.navigation.navigate('NewsFeed')}
-                style={{marginRight: 16}}
+                style={{marginRight: 16, paddingHorizontal: 4}}
               >
-                <Feather name='search' size={24} color={'black'}/>
+                <FontAwesome name='newspaper-o' size={24} color={'white'}/>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => props.navigation.navigate('Analytics')}
-                style={{marginRight: 16}}
+                style={{marginRight: 16, paddingHorizontal: 4}}
               >
-                <Feather name='search' size={24} color={'black'}/>
+                <SimpleLineIcons name='chart' size={24} color={'white'}/>
               </TouchableOpacity>
             </View>
           }}
@@ -93,7 +93,7 @@ export default function HomeStack(props) {
         component={PracticeScreen}
       />
 
-           <Stack.Screen 
+      <Stack.Screen 
         name="Learn" 
         component={VocabDetailScreen}
       />

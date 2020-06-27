@@ -8,7 +8,7 @@ export default function ProgressBar(props){
          <View style={ styles.ProgressBar}>
             <View style={ {
                 width: props.percent,
-                backgroundColor: '#006bc9',
+                backgroundColor: '#F1D513',
                 height: 6,
                 borderRadius: 3,
          
@@ -29,7 +29,7 @@ ProgressBar:
     borderWidth: 1,
     borderColor: 'white',
     borderRadius: 4,
-    backgroundColor: '#2ee4ff',
+    backgroundColor: '',
     flexDirection: 'row',
     alignItems: 'center',
 },

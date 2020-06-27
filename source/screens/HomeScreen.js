@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native'
 import Score from '../components/Home/Score' 
-import { Feather } from '@expo/vector-icons'
+import { Feather, FontAwesome, FontAwesome5 } from '@expo/vector-icons'
 import Unit from '../components/Home/Unit'
 import UnitList from '../components/Home/UnitList'
 import ProgressBar from '../components/Home/ProgressBar'
@@ -29,17 +29,43 @@ export default function HomeScreen({navigation}){
             />
             <View style={styles.subHeader}>
                 <TouchableOpacity onPress={() => setChange(!isChange)}>
-                    <Feather name='menu' size={24} color='black'/>    
+                    <View style={{marginHorizontal: 15}}>
+                        {
+                            (!isChange) ?
+                            <FontAwesome name='tasks' size={24} color='#0E2C3D'/> :
+                            <Feather name='grid' size={24} color='#0E2C3D'/>
+                        }
+                    </View>  
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Schools')}>
-                    <Text>Schools</Text>    
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Test')}>
-                    <Text>Test</Text>    
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Vocab')}>
-                    <Text>Vocab</Text>    
-                </TouchableOpacity>
+                <View style={[styles.row, {justifyContent: 'space-around'}]}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Schools')}>
+                        <View style={[styles.row, {width: '100%'}]}>
+                            <FontAwesome
+                                name='bank' size={20} color='#0E2C3D'
+                                style={{paddingHorizontal: 5}}
+                            />
+                            <Text>Schools</Text>    
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Test')}>
+                        <View style={[styles.row, {width: '100%'}]}>
+                            <FontAwesome5
+                                name='calculator' size={20} color='#0E2C3D'
+                                style={{paddingHorizontal: 5}}
+                            />
+                            <Text>Test</Text> 
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Vocab')}>
+                        <View style={[styles.row, {width: '100%'}]}>
+                            <FontAwesome
+                                name='list-alt' size={20} color='#0E2C3D'
+                                style={{paddingHorizontal: 5}}
+                            />
+                            <Text>Vocab</Text> 
+                        </View>
+                    </TouchableOpacity>
+                </View>
             </View>
             {
                 (!isChange) ?
@@ -74,8 +100,15 @@ export default function HomeScreen({navigation}){
                                 ))}
                             >
                                 <View style={{backgroundColor: 'white', height: 50, flexDirection: 'column', justifyContent: 'space-between'}}>
-                                    <Text style={{textAlign: 'center'}}>{item.name}</Text>
-                                    <ProgressBar percent={item.percent} />
+                                    <View>
+                                        <Text style={{textAlign: 'center', color: '#05B5CC', fontSize: 16}}>{item.name}</Text>
+                                    </View>
+                                    <View style={{flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 10}}>
+                                        <View style={{backgroundColor: '#e4e4e4', width: '90%', height: 8, borderRadius: 4, alignSelf: 'center'}}>
+                                            <ProgressBar percent={item.percent} />
+                                        </View>
+                                        <Text style={{color: '#F1D513'}}>{item.percent}</Text>
+                                    </View>
                                 </View>
                                 
                                 {
@@ -97,8 +130,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-around',
         borderBottomColor: 'grey',
         borderBottomWidth: 2
+    },
+    row: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
     }
 })

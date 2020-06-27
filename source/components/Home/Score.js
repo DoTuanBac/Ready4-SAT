@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import ProgressBar from './ProgressBar'
 import { AntDesign } from '@expo/vector-icons'
+import Avatar from '../Home/Avatar'
 
 export default function Score(props){
     return(
@@ -10,13 +11,7 @@ export default function Score(props){
                 <Text style={{color: 'white', fontSize: 15, paddingTop: 15}}>Estimated Score</Text>
                 <View style={styles.score}>
                     <View style={styles.user}>
-                        <TouchableOpacity
-                            onPress={() => {props.navigation.navigate('MyProfile')}}
-                        >
-                            <View style={styles.userIcon}>
-                                <AntDesign name='user' size={24} color={'white'}/>
-                            </View>
-                        </TouchableOpacity>
+                        <Avatar navigation={props.navigation} color={'white'} home={true}/>
                     </View>
                     <Text style={{fontSize: 60, color: 'white'}}>{props.overall}</Text>
                     <View style={[styles.skill]}>
@@ -70,16 +65,5 @@ const styles = StyleSheet.create({
     user: {
         width: 50,
         alignItems: 'flex-end'
-    },
-    userIcon: {
-        width: 40,
-        height: 40,
-        borderWidth: 2,
-        borderRadius: '50%',
-        borderColor: 'white',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 30,
-        marginTop: -60
     }
 })
