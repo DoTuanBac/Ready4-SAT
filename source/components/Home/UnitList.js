@@ -6,11 +6,12 @@ export default function UnitList(props){
     return(
         <View style={styles.container}>
             {
-                props.skill && 
+                props.skill ?
                 <View>
                     <Text style={{fontSize: 25, paddingTop: 5, paddingLeft: 15, color: 'white'}}>Unit Heading</Text>
                     <Text style={{fontSize: 15, paddingTop: 10, paddingLeft: 15, color: 'white'}}>Unit Sub-Heading</Text>
-                </View>
+                </View> :
+                <View></View>
             }
             <FlatList 
                 data={[{id: 1, title: 'item 1'},{id: 2, title: 'item 2'},{id: 3, title: 'item 3'}]}
