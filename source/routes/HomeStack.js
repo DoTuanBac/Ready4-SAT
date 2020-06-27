@@ -4,7 +4,7 @@ import { TouchableOpacity, View } from 'react-native';
 import {Feather} from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
 import LeaderboardScreen from '../screens/LeaderboardScreen'
-// import NewsFeedScreen from '../screens/NewsFeedScreen'
+import NewsFeedScreen from '../screens/NewsFeedScreen/NewsFeedScreen'
 import AnalyticsScreen from '../screens/AnalyticsScreen'
 import SchoolsScreen from '../screens/SchoolsScreen'
 import TestScreen from '../screens/TestScreen'
@@ -59,10 +59,10 @@ export default function HomeStack(props) {
         name="Leaderboard" 
         component={LeaderboardScreen}
       />
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="NewsFeed" 
         component={NewsFeedScreen}
-      /> */}
+      />
       <Stack.Screen 
         name="Analytics" 
         component={AnalyticsScreen}
