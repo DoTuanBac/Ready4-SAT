@@ -6,7 +6,7 @@ export default function RegisterScreen({navigation}){
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
     return(
-        <LinearGradient style={styles.fullbox}   colors={[ '#0a566b','#14ccff']}> 
+        <LinearGradient style={styles.fullbox}   colors={[ '#082e38','#118cad']}> 
         <Text style={{color:'white',fontSize:20,fontWeight:"bold",marginTop:35}}>Sign up</Text>
         <Text  style={{color:'white',textAlign:'center',marginTop:20}}>Please create an account{'\n'}to save your progress.{'\n'}It's completely free.</Text>
         <View style={{width:'70%' ,backgroundColor:"#3b5998",padding:10,marginTop:20,flexDirection: 'row',borderRadius:4,}}>

@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding:30,
-        backgroundColor: '#0084ad',
+        backgroundColor: '#082e38',
         width:'100%',
     },
     box2: {
