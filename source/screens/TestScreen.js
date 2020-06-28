@@ -8,10 +8,10 @@ export default function TestScreen({navigation}){
 
         return(
             <LinearGradient style={styles.fullbox}  colors={[ '#0a566b','#14ccff']}>
-  
-            <FlatList 
+
+            <FlatList
         data={Test}
-        renderItem={({ item }) => <TestCategories navigation={navigation} item={item} ></TestCategories>}
+        renderItem={({ item }) => <TestCategories navigation={navigation} item={item} />}
         keyExtractor={item => item.id}
         style={styles.box}
       />
@@ -23,10 +23,10 @@ export default function TestScreen({navigation}){
 const styles = StyleSheet.create({
 fullbox:
 {
-    flex: 1, 
+    flex: 1,
     justifyContent: 'center',
         alignItems: 'center',
-    
+
 },
 box:
 {
