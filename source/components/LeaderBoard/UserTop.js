@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text,StyleSheet } from 'react-native'
-import Avatar from './Avatar'
+import Avatar from '../Home/Avatar'
 
 export default function UserTop(props){
     return(

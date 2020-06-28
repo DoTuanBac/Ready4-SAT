@@ -100,7 +100,7 @@ export const styles = StyleSheet.create({
         paddingLeft: 28,
     },
     border:{
-        borderRadius: '50%',
+        borderRadius: 100,
         width: 100,
         borderColor: '#5fb8cf',
         borderWidth: 5,
