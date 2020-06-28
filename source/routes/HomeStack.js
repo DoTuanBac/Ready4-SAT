@@ -15,6 +15,7 @@ import TestDetailScreen from '../screens/TestDetailScreen'
 import VocabListScreen from '../screens/VocabListScreen'
 import MyProfileScreen from "../screens/MyProfileScreen";
 import MyTestScreen from "../screens/MyTestScreen";
+import NewsFeedScreen from "../screens/NewsFeedScreen";
 
 const Stack = createStackNavigator();
 
@@ -86,7 +87,7 @@ export default function HomeStack(props) {
           }}
 
       />
-           <Stack.Screen
+      <Stack.Screen
         name="Question"
         component={TestDetailScreen}
         options={{
@@ -137,8 +138,12 @@ export default function HomeStack(props) {
         component={MyProfileScreen}
       />
       <Stack.Screen
-          name="MyProfile"
+          name="MyTest"
           component={MyTestScreen}
+      />
+      <Stack.Screen
+          name="NewsFeed"
+          component={NewsFeedScreen}
       />
       <Stack.Screen
         name="Practice"
