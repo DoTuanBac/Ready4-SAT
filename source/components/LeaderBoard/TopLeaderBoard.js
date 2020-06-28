@@ -2,8 +2,7 @@ import React from 'react'
 import { View, Text,StyleSheet } from 'react-native'
 import Avatar from "../Home/Avatar";
 export default function TopLeaderBoard(props){
-    function getSize(top)
-    {
+    function getSize(top) {
         if(top===1) return 100;
         else if(top===2) return 80;
         else if(top===3)  return 80;
@@ -11,28 +10,22 @@ export default function TopLeaderBoard(props){
     return(
         <View style={styles.BoxTopDetail}>
         <Text style={styles.top}>{props.top}</Text>
-    <Avatar size={getSize(props.top)} uri={props.user.avatar}/>
-    <Text style={styles.contentText}>{props.user.name}</Text>
-    <Text style={styles.contentText}>{props.user.points}</Text>
+        <Avatar size={getSize(props.top)} uri={props.user.avatar}/>
+        <Text style={styles.contentText}>{props.user.name}</Text>
+        <Text style={styles.contentText}>{props.user.points}</Text>
     </View>
     )
 }
 const styles = StyleSheet.create({
-
-    BoxTopDetail:
-    {
+    BoxTopDetail: {
         marginTop:20,
         alignItems: 'center',
     },
-    contentText:
-    {
+    contentText: {
         color:'white',
-
-
     },
-    top:
-    {
+    top: {
          color:'white',
         marginBottom:10,
     },
-    })
+})

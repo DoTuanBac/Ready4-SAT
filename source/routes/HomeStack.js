@@ -8,16 +8,14 @@ import AnalyticsScreen from '../screens/AnalyticsScreen'
 import SchoolsScreen from '../screens/SchoolsScreen'
 import TestScreen from '../screens/TestScreen'
 import VocabScreen from '../screens/VocabScreen'
-import MyProfileScreen from '../screens/MyProfileScreen'
 import PracticeScreen from '../screens/PracticeScreen'
 import VocabDetailScreen from '../screens/VocabDetailScreen'
 import VocabHelpScreen from '../screens/VocalHelpScreen'
 import TestDetailScreen from '../screens/TestDetailScreen'
 import VocabListScreen from '../screens/VocabListScreen'
+import MyProfileScreen from "../screens/MyProfileScreen";
 import MyTestScreen from "../screens/MyTestScreen";
 import NewsFeedScreen from "../screens/NewsFeedScreen";
-import NewsFeedDetailScreen from "../screens/NewsFeedDetailScreen";
-import ModalView from "../components/Profile/ModalView";
 
 import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
@@ -70,14 +68,6 @@ export default function HomeStack(props) {
         component={LeaderboardScreen}
       />
       <Stack.Screen
-          name="NewsFeed"
-          component={NewsFeedScreen}
-      />
-        <Stack.Screen
-            name="NewsFeedDetail"
-            component={NewsFeedDetailScreen}
-        />
-      <Stack.Screen
         name="Analytics"
         component={AnalyticsScreen}
       />
@@ -102,7 +92,7 @@ export default function HomeStack(props) {
           }}
 
       />
-           <Stack.Screen
+      <Stack.Screen
         name="Question"
         component={TestDetailScreen}
         options={{
@@ -152,10 +142,14 @@ export default function HomeStack(props) {
         name="MyProfile"
         component={MyProfileScreen}
       />
-        <Stack.Screen
-            name="MyTest"
-            component={MyTestScreen}
-        />
+      <Stack.Screen
+          name="MyTest"
+          component={MyTestScreen}
+      />
+      <Stack.Screen
+          name="NewsFeed"
+          component={NewsFeedScreen}
+      />
       <Stack.Screen
         name="Practice"
         component={PracticeScreen}

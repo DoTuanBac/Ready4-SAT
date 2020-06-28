@@ -3,7 +3,7 @@ import { View, Text,StyleSheet,TouchableOpacity,} from 'react-native'
 
 export default function VocabDetail(props){
     const [count, setCount] = useState(0);
-  
+
     if(count%2==0)
     return(
 
@@ -12,8 +12,8 @@ export default function VocabDetail(props){
            <Text style={styles.adj}>{props.word.category}</Text>
            <Text style={styles.pronounce}>{props.word.pronounce}</Text>
            <Text style={styles.tap}>Tap to see meaning</Text>
-       
-          </TouchableOpacity>  
+
+          </TouchableOpacity>
 
 
     );
@@ -21,7 +21,7 @@ export default function VocabDetail(props){
     return(
 
           <TouchableOpacity onPress={() => setCount(count+1)}  style={styles.box2}>
-            
+
             <View style={styles.title}><Text style={styles.word2} >{props.word.word}</Text></View>
            <Text style={styles.adj}>{props.word.category}</Text>
            <Text style={styles.pronounce} >{props.word.pronounce}</Text>
@@ -30,7 +30,7 @@ export default function VocabDetail(props){
            <Text style={styles.contextTitle}>{props.word.context}</Text>
            <View><Text >{props.word.explainContext}</Text></View>
            </View>
-          </TouchableOpacity>  
+          </TouchableOpacity>
 
 
     );
@@ -39,13 +39,13 @@ export default function VocabDetail(props){
 
 
 const styles = StyleSheet.create({
- 
+
     box:{
         width:'100%',
         height:'100%',
         justifyContent: 'center',
         alignItems: 'center',
-        
+
     },
     box2:
     {
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     word:{
         fontSize:30,
         fontWeight:"bold",
-       
+
     },
     title:
     {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         fontSize:15,
         padding:5,
         color:'white',
-     
+
 
     },
     adj:
@@ -76,13 +76,12 @@ const styles = StyleSheet.create({
           marginTop:10,
             fontSize:15,
             color:'#cdccd5',
-            
+
     },
     pronounce:
     {
-        marginTop:5,
-        color:"#2B83B2",
         marginTop:10,
+        color:"#2B83B2",
     },
     meaning:
     {
@@ -102,11 +101,11 @@ const styles = StyleSheet.create({
           marginTop:100,
             fontSize:20,
             color:'#c7ebe6',
-           
+
     },
     contextTitle:
     {
         fontWeight:"bold",
     },
 
-})  
+})

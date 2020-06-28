@@ -53,30 +53,23 @@ export default function VocabCategories(props){
 }
 
 const styles = StyleSheet.create({
- fullbox:
- {
-width:'100%',
-flex: 1,
-justifyContent: 'center',
-    alignItems: 'center',
-
- },
-    listbox:
-    {
+    fullbox: {
+        width:'100%',
+        flex: 1,
+        justifyContent: 'center',
+            alignItems: 'center',
+    },
+    listbox: {
         width:'90%',
     },
     box: {
-
         justifyContent: 'center',
         alignItems: 'center',
         padding:30,
         backgroundColor: '#0084ad',
         width:'100%',
-
-
     },
     box2: {
-
         justifyContent: 'center',
         alignItems: 'center',
         padding:30,
@@ -86,40 +79,29 @@ justifyContent: 'center',
         marginVertical:20,
         borderRadius:10,
     },
-
     progressBarContainer : {
         margin:5,
         width:'90%',
     },
-
-    basicWord:
-    {
-
+    basicWord: {
         fontSize: 25,
         fontWeight:'bold',
         margin:5,
         color:'white',
     },
-    basicWord2:
-    {
-
+    basicWord2: {
         fontSize: 25,
         fontWeight:'bold',
         margin:5,
         color:'gray',
     },
-    mastered:
-    {
+    mastered: {
         fontSize: 15,
         margin:5,
         color:'white',
     },
-    mastered1:
-    {
+    mastered1: {
         fontSize: 15,
         margin:5,
     },
-
-
-
 })

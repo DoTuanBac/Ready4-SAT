@@ -10,8 +10,8 @@ export default function TestDetailScreen({route,navigation}){
     const [score, setScore] = useState(0);
     const { questions } = route.params;
 
-    var x=0;
-    var progress='0%';
+    let x=0;
+    let progress='0%';
     function checkcheck()
     {
         if(check===true)  setCheck(false);
@@ -19,49 +19,49 @@ export default function TestDetailScreen({route,navigation}){
     }
     for(let question of questions)
     {
-        if(count===x)
-        {
+        if(count===x) {
             progress
+            return(
+                <View style={styles.fullbox}>
+                    <TestDetail
+                        question={question}
+                        check={check}
+                        progress={(count + 1) * 100 / questions.length + '%'}
+                    />
+
+                    <View style={styles.bottom}>
+                       <TouchableOpacity onPress={() => {setCount(count-1), setCheck(false)}}>
+                          <AntDesign name="leftcircleo" size={24} color="white" />
+                       </TouchableOpacity>
+                       <TouchableOpacity onPress={() => checkcheck()}>
+                           <AntDesign name="checkcircleo" size={24} color="white" />
+                       </TouchableOpacity>
+                       <TouchableOpacity onPress={() => {setCount(count+1) && setCheck(false)}}>
+                           <AntDesign name="rightcircleo" size={24} color="white" />
+                       </TouchableOpacity>
+                    </View>
+                </View>
+            )
+        }
+        x++;
+    }
     return(
-        <View style={styles.fullbox}>
+       <Finish
+           score={score}
+           sum={questions.length}
+           route={"Test"}
+           navigation={navigation}
+       />
+     );
 
-            <TestDetail question={question} check={check} progress={(count+1)*100/questions.length+'%'}></TestDetail>
-
-            <View style={styles.bottom}>
-           <TouchableOpacity onPress={() => {setCount(count-1), setCheck(false)}}>
-              <AntDesign name="leftcircleo" size={24} color="white" />
-           </TouchableOpacity>
-           <TouchableOpacity onPress={() => checkcheck()}>
-           <AntDesign name="checkcircleo" size={24} color="white" />
-           </TouchableOpacity>
-           <TouchableOpacity onPress={() => {setCount(count+1), setCheck(false)}}>
-           <AntDesign name="rightcircleo" size={24} color="white" />
-           </TouchableOpacity>
-           </View>
-
-        </View>
-    )
-}
-
-x++;
-}
-return(
-   <Finish score={score} sum={questions.length} route={"Test"} navigation={navigation}></Finish>
- );
-
-}
+};
 
 const styles = StyleSheet.create({
-
-    fullbox:
-    {
-backgroundColor:"white",
+    fullbox: {
+        backgroundColor:"white",
         flex:1,
     },
-
-
-    bottom:
-    {
+    bottom: {
         position: 'absolute',
         bottom:0,
         backgroundColor:'#0a566b',
@@ -72,7 +72,4 @@ backgroundColor:"white",
         alignItems: 'center',
         justifyContent: 'space-around',
     },
-
-
-
-})
+});

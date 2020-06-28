@@ -1,8 +1,9 @@
 import React,{ useState } from 'react'
-import { View, Text,StyleSheet,TouchableOpacity,FlatList} from 'react-native'
+import { View, Text,StyleSheet,TouchableOpacity} from 'react-native'
 import VocabDetail from '../components/Vocab/VocabDetail'
 import Finish from '../components/Vocab/Finish'
 import { AntDesign } from '@expo/vector-icons';
+
 export default function VocabDetailScreen({route,navigation}){
     const {id}=route.params;
     const [count, setCount] = useState(id);
@@ -18,43 +19,39 @@ export default function VocabDetailScreen({route,navigation}){
                     <View style={styles.box}>
                     <VocabDetail  word={item} />
                     <View style={styles.bottom}>
+                        <TouchableOpacity  style={styles.bottombutton} onPress={() => setCount(count+1)}>
+                            <AntDesign name="closecircleo" size={24} color="red" />
+                            <Text style={{color:"red"}}>Don't know</Text>
+                        </TouchableOpacity>
 
-                <TouchableOpacity  style={styles.bottombutton} onPress={() => setCount(count+1)}>
-                <AntDesign name="closecircleo" size={24} color="red" />
-                    <Text style={{color:"red"}}>Don't know</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity  style={styles.bottombutton} onPress={() => {setCount(count+1),setScore(score+1)}}>
-                <AntDesign name="checkcircleo" size={24} color="green" />
-                    <Text style={{color:"green"}}>Master</Text>
-                </TouchableOpacity>
-
+                        <TouchableOpacity
+                            style={styles.bottombutton}
+                            onPress={() => {setCount(count+1) && setScore(score+1)}}
+                        >
+                            <AntDesign name="checkcircleo" size={24} color="green" />
+                            <Text style={{color:"green"}}>Master</Text>
+                        </TouchableOpacity>
                     </View>
                   </View>
                 </View>
             );
         }
-
         x++;
     }
      return(
         <Finish score={score} sum={x} route={"Vocab"} navigation={navigation}/>
      );
-
 }
 
 
 const styles = StyleSheet.create({
-
-    fullbox:
-    {
+    fullbox: {
         justifyContent: 'center',
         alignItems: 'center',
         flex:1,
         backgroundColor:"white",
     },
-    box:
-    {
+    box: {
         width:'95%',
         height:'90%',
         borderRadius: 4,
@@ -62,9 +59,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
 
     },
-
-    bottom:
-    {
+    bottom: {
         position: 'absolute',
         bottom:0,
         borderColor:'#05B5CC',
@@ -77,10 +72,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
     },
-    bottombutton:
-    {
+    bottombutton: {
         justifyContent: 'center',
         alignItems: 'center',
     },
-
 })

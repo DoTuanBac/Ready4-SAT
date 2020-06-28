@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import React, {useState} from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {AntDesign} from '@expo/vector-icons';
 
 export default function NewsFeedItemView(props) {
 
     const { schoolName, date, title, navigation } = props;
 
     const [count, setCount] = useState(123);
+    const [click, setClick] = useState(1);
 
     const handleLike = () => {
-        let updateCount = count + 1;
-        setCount(updateCount);
+        let updateClick = click +1;
+        if(updateClick%2 === 0){
+            let updateCount = count + 1;
+            setCount(updateCount);
+            setClick(updateClick);
+        }
+        else {
+            setCount(count - 1);
+            setClick(updateClick);
+        }
     }
 
     return (
@@ -19,7 +28,7 @@ export default function NewsFeedItemView(props) {
                 <View style={styles.header}>
                     <Image
                         style={styles.schoolImage}
-                        source={{ uri: 'https://reactjs.org/logo-og.png' }}
+                        source={{uri: 'https://reactjs.org/logo-og.png'}}
                     />
                     <View style={styles.school}>
                         <Text style={styles.schoolName}>{schoolName}</Text>
@@ -30,18 +39,30 @@ export default function NewsFeedItemView(props) {
                 <Text style={styles.title}>{title}</Text>
                 <Image
                     style={styles.image}
-                    source={{ uri: 'https://thumbs.dreamstime.com/b/image-wood-texture-boardwalk-beautiful-autumn-landscape-background-free-copy-space-use-background-backdrop-to-132997627.jpg' }}
+                    source={{uri: 'https://thumbs.dreamstime.com/b/image-wood-texture-boardwalk-beautiful-autumn-landscape-background-free-copy-space-use-background-backdrop-to-132997627.jpg'}}
                 />
                 <View style={styles.footer}>
                     <View style={styles.left}>
                         <TouchableOpacity onPress={handleLike}>
-                            <Ionicons name="md-checkmark-circle" size={32} color="green" />;
+                            {
+                                (click%2===0) ?
+                                    <AntDesign name="heart" size={14} color="black"/> :
+                                    <AntDesign name="hearto" size={14} color="black"/>
+                            }
                         </TouchableOpacity>
                         <Text style={styles.tym}>{count}</Text>
                     </View>
                     <View style={styles.right}>
-                        <Ionicons name="md-checkmark-circle" size={32} color="green" />;
-                        <Ionicons name="md-checkmark-circle" size={32} color="green" />;
+                        <TouchableOpacity onPress={handleLike}>
+                            <AntDesign name="hearto" size={14} color="black"/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{marginLeft: 6,}} onPress={handleLike}>
+                            {
+                                (click%2===0) ?
+                                    <AntDesign name="heart" size={14} color="black"/> :
+                                    <AntDesign name="hearto" size={14} color="black"/>
+                            }
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
@@ -97,25 +118,30 @@ const styles = StyleSheet.create({
         height: 200,
     },
     footer: {
-        height: 50,
         flex: 1,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
     },
     left: {
-        flex: 1,
         flexDirection: "row",
         justifyContent: "flex-start",
-        marginLeft: 5
+        alignItems: "center",
+        marginLeft: 8,
+        paddingTop: 10,
+        paddingBottom: 10,
     },
     right: {
-        flex: 1,
         flexDirection: "row",
         justifyContent: "flex-end",
-        marginRight: 5,
+        alignItems: "center",
+        marginRight: 8,
+        paddingTop: 10,
+        paddingBottom: 10,
     },
     tym: {
-        marginLeft: 5,
+        fontSize: 18,
+        marginLeft: 6,
+        marginBottom: 2,
     }
 });
