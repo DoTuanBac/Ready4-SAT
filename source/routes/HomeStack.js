@@ -2,10 +2,8 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity, View,Text } from 'react-native';
 import { Feather, SimpleLineIcons, FontAwesome,Entypo,AntDesign } from '@expo/vector-icons'
-
 import HomeScreen from '../screens/HomeScreen'
 import LeaderboardScreen from '../screens/LeaderboardScreen'
-// import NewsFeedScreen from '../screens/NewsFeedScreen/NewsFeedScreen'
 import AnalyticsScreen from '../screens/AnalyticsScreen'
 import SchoolsScreen from '../screens/SchoolsScreen'
 import TestScreen from '../screens/TestScreen'
