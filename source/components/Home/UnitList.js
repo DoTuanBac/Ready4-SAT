@@ -13,7 +13,7 @@ export default function UnitList(props){
                 </View> :
                 <View></View>
             }
-            <FlatList 
+            <FlatList
                 data={props.questions}
                 renderItem={({item}) => (
                     <TouchableOpacity
@@ -24,7 +24,7 @@ export default function UnitList(props){
                             <Text style={{fontSize: 15, color:'#05B5CC'}}>{item.name}</Text>
                             <Entypo name='documents' color='#05B5CC' size={50}/>
                         </View>
-                    </TouchableOpacity>    
+                    </TouchableOpacity>
                 )}
                 keyExtractor = {(item) => item.id}
                 horizontal = {true}
@@ -37,8 +37,8 @@ export default function UnitList(props){
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%', 
-        height: 200, 
+        width: '100%',
+        height: 200,
         backgroundColor: '#05B5CC',
     },
     center: {
@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     item: {
-        width: 150, 
-        height: 100, 
+        width: 150,
+        height: 100,
         borderRadius: 10,
-        marginLeft: 6, 
+        marginLeft: 6,
         backgroundColor: 'white',
         alignSelf: 'center'
     }

@@ -1,4 +1,4 @@
-export const newsfeed = [
+export const NewsFeed = [
     {
         id: 1,
         schoolName: "School 1",

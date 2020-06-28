@@ -1,7 +1,7 @@
 import React from 'react'
-import { View, Text, FlatList, StyleSheet} from 'react-native'
-import { newsfeed } from '../../data/newsfeed'
-import NewsfeedItemView from './NewsfeedItemView'
+import {View, FlatList, StyleSheet, Text} from 'react-native'
+import NewsFeedItemView from "../components/Newsfeed/NewsFeedItemView";
+import {NewsFeed} from "../data/newsfeed";
 
 export default function NewsFeedScreen(props) {
 
@@ -9,16 +9,17 @@ export default function NewsFeedScreen(props) {
 
     return (
         <View style={styles.container}>
+            <Text>Hello</Text>
             <FlatList
-                data={newsfeed}
-                keyExtractor={item => item.id}
+                data={NewsFeed}
                 renderItem={({ item }) =>
-                    <NewsfeedItemView
+                    <NewsFeedItemView
                         navigation={navigation}
                         schoolName={item.schoolName}
                         date={item.date}
                         title={item.title}
-                    ></NewsfeedItemView>}
+                    />}
+                keyExtractor={item => item.id}
             />
         </View>
     )
