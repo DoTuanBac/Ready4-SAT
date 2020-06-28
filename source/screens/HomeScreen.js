@@ -42,7 +42,7 @@ export default function HomeScreen({navigation}){
                     </View>  
                 </TouchableOpacity>
                 <View style={[styles.row, {justifyContent: 'space-around'}]}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Schools')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Introduce')}>
                         <View style={[styles.row, {width: '100%'}]}>
                             <FontAwesome
                                 name='bank' size={20} color='#0E2C3D'

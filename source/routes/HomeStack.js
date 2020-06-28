@@ -17,6 +17,11 @@ import VocabHelpScreen from '../screens/VocalHelpScreen'
 import TestDetailScreen from '../screens/TestDetailScreen'
 import VocabListScreen from '../screens/VocabListScreen'
 
+import LoginScreen from '../screens/LoginScreen'
+import RegisterScreen from '../screens/RegisterScreen'
+import RegisterDetailScreen from '../screens/RegisterDetailScreen'
+import IntroduceScreen from '../screens/IntroduceScreen'
+import ForgotScreen from '../screens/ForgotScreen'
 const Stack = createStackNavigator();
 
 export default function HomeStack(props) {
@@ -214,6 +219,90 @@ export default function HomeStack(props) {
           }}
       />
 
+
+
+<Stack.Screen 
+        name="Login" 
+        component={LoginScreen}
+        options={{
+          headerStyle: {backgroundColor: '#0a566b'},
+          title: '',
+          headerLeft: () => 
+            <TouchableOpacity
+              onPress={() => props.navigation.goBack()}
+              style={{marginLeft: 16}}
+            >
+             <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Cancel</Text>
+            </TouchableOpacity>,
+        
+          }}
+      />
+      <Stack.Screen 
+        name="Forgot" 
+        component={ForgotScreen}
+        options={{
+          headerStyle: {backgroundColor: '#0a566b'},
+          title: '',
+          headerLeft: () => 
+            <TouchableOpacity
+              onPress={() => props.navigation.goBack()}
+              style={{marginLeft: 16}}
+            >
+             <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Cancel</Text>
+            </TouchableOpacity>,
+        
+          }}
+      />
+        <Stack.Screen 
+        name="Register" 
+        component={RegisterScreen}
+        options={{
+          headerStyle: {backgroundColor: '#0a566b'},
+          title: '',
+          headerLeft: () => 
+            <TouchableOpacity
+              onPress={() => props.navigation.goBack()}
+              style={{marginLeft: 16}}
+            >
+             <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
+            </TouchableOpacity>,
+        
+          }}
+      />
+        <Stack.Screen 
+        name="RegisterDetail" 
+        component={RegisterDetailScreen}
+        options={{
+          headerStyle: {backgroundColor: '#0a566b'},
+          title: '',
+          headerLeft: () => 
+            <TouchableOpacity
+              onPress={() => props.navigation.goBack()}
+              style={{marginLeft: 16}}
+            >
+             <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
+            </TouchableOpacity>,
+        
+          }}
+      />
+        <Stack.Screen 
+        name="Introduce" 
+        component={IntroduceScreen}
+        options={{
+          headerStyle: {backgroundColor: 'white'},
+          title: '',
+          headerLeft: () => 
+          <View></View>,
+          headerRight: () => 
+            <TouchableOpacity
+             onPress={() =>props.navigation.navigate('Login')}
+              style={{marginRight: 16}}
+            >
+             <Text style={{color:"black", fontWeight:"bold",fontSize:16}}>Log In</Text>
+            </TouchableOpacity>,
+        
+          }}
+      />
     </Stack.Navigator>
   );
 }
