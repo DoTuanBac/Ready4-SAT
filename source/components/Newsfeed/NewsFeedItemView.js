@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { Ionicons } from '@expo/vector-icons';
 
-export default function NewsfeedItemView(props) {
+export default function NewsFeedItemView(props) {
 
     const { schoolName, date, title, navigation } = props;
 
-    const [count, setCount] = useState(123); 
+    const [count, setCount] = useState(123);
 
     const handleLike = () => {
         let updateCount = count + 1;
@@ -14,7 +14,7 @@ export default function NewsfeedItemView(props) {
     }
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('NewsfeedDetail')}>
+        <TouchableOpacity onPress={() => navigation.navigate('NewsFeedDetail')}>
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Image
@@ -35,13 +35,13 @@ export default function NewsfeedItemView(props) {
                 <View style={styles.footer}>
                     <View style={styles.left}>
                         <TouchableOpacity onPress={handleLike}>
-                            <Icon name="favorite" />
+                            <Ionicons name="md-checkmark-circle" size={32} color="green" />;
                         </TouchableOpacity>
                         <Text style={styles.tym}>{count}</Text>
                     </View>
                     <View style={styles.right}>
-                        <Icon name="share" />
-                        <Icon name="bookmark" />
+                        <Ionicons name="md-checkmark-circle" size={32} color="green" />;
+                        <Ionicons name="md-checkmark-circle" size={32} color="green" />;
                     </View>
                 </View>
             </View>
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
         alignItems: "center",
- 
+
     },
     schoolImage: {
         height: 40,
