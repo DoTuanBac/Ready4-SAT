@@ -5,7 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 import {Profile} from "../data/profile";
 import TouchableOpacity from "react-native-web/dist/exports/TouchableOpacity";
 
-export default function MyProfile(props){
+export default function MyProfileScreen(props){
     const [value, onChangeText] = React.useState('');
     //const [isUser, setIsUser] = React.useState(false);
     const [user] = React.useState(Profile);

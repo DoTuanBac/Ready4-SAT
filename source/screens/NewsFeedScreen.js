@@ -4,7 +4,6 @@ import NewsFeedItemView from "../components/Newsfeed/NewsFeedItemView";
 import {NewsFeed} from "../data/newsfeed";
 
 export default function NewsFeedScreen(props) {
-
     const { navigation } = props;
 
     return (

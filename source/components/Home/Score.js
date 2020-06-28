@@ -22,7 +22,7 @@ export default function Score(props){
                         <Text style={{color: 'white', fontSize: 24}}>{props.rnw}</Text>
                         <Text style={{color: 'white', fontSize: 12}}>Math</Text>
                     </View>
-                    <View style={styles.user}></View>
+                    <View style={styles.user}/>
                 </View>
             </View>
             <View style={styles.progressBarContainer}>
@@ -30,7 +30,7 @@ export default function Score(props){
                     <Text style={{color: '#F1D513'}}>80%</Text>
                 </View>
                 <ProgressBar percent='80%'/>
-            </View>   
+            </View>
         </View>
     )
 }

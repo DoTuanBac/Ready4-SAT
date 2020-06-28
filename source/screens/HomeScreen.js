@@ -1,23 +1,21 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native'
-import Score from '../components/Home/Score' 
+import Score from '../components/Home/Score'
 import { Feather, FontAwesome, FontAwesome5 } from '@expo/vector-icons'
 import Unit from '../components/Home/Unit'
 import UnitList from '../components/Home/UnitList'
 import ProgressBar from '../components/Home/ProgressBar'
 
-
 import {Test} from '../data/test'
-
 
 export default function HomeScreen({navigation}){
     const [isChange, setChange] = useState(false)
     const [isUnitOpen, setUnitOpen] = useState(false)
 
     const skills = [
-        {id: 1, name:'Reading', percent:'35%'}, 
-        {id: 2, name:'Writing', percent:'55%'}, 
-        {id: 3, name:'Math-Calculator', percent: '25%'}, 
+        {id: 1, name:'Reading', percent:'35%'},
+        {id: 2, name:'Writing', percent:'55%'},
+        {id: 3, name:'Math-Calculator', percent: '25%'},
         {id: 4, name:'Math- No Calculator', percent: '60%'}
     ]
 
@@ -25,7 +23,7 @@ export default function HomeScreen({navigation}){
 
     return(
         <View>
-            <Score 
+            <Score
                 navigation={navigation}
                 overall='900'
                 math='450'
@@ -39,7 +37,7 @@ export default function HomeScreen({navigation}){
                             <FontAwesome name='tasks' size={24} color='#0E2C3D'/> :
                             <Feather name='grid' size={24} color='#0E2C3D'/>
                         }
-                    </View>  
+                    </View>
                 </TouchableOpacity>
                 <View style={[styles.row, {justifyContent: 'space-around'}]}>
                     <TouchableOpacity onPress={() => navigation.navigate('Schools')}>
@@ -48,7 +46,7 @@ export default function HomeScreen({navigation}){
                                 name='bank' size={20} color='#0E2C3D'
                                 style={{paddingHorizontal: 5}}
                             />
-                            <Text>Schools</Text>    
+                            <Text>Schools</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation.navigate('Test')}>
@@ -57,7 +55,7 @@ export default function HomeScreen({navigation}){
                                 name='calculator' size={20} color='#0E2C3D'
                                 style={{paddingHorizontal: 5}}
                             />
-                            <Text>Test</Text> 
+                            <Text>Test</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation.navigate('Vocab')}>
@@ -66,7 +64,7 @@ export default function HomeScreen({navigation}){
                                 name='list-alt' size={20} color='#0E2C3D'
                                 style={{paddingHorizontal: 5}}
                             />
-                            <Text>Vocab</Text> 
+                            <Text>Vocab</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -89,7 +87,7 @@ export default function HomeScreen({navigation}){
                         (isUnitOpen) &&
                         <UnitList navigation={navigation} questions={Test} skill={true}/>
                     }
-                </View> : 
+                </View> :
                 <View>
                     <FlatList
                         data={isSkillOpen}
@@ -114,7 +112,7 @@ export default function HomeScreen({navigation}){
                                         <Text style={{color: '#F1D513'}}>{item.percent}</Text>
                                     </View>
                                 </View>
-                                
+
                                 {
                                     (item.isOpen) &&
                                     <UnitList navigation={navigation}  questions={Test} skill={false}/>

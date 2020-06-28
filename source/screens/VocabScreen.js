@@ -7,13 +7,13 @@ export default function VocabScreen({navigation}){
 
     return(
       <View style={styles.fullbox}>
-               <FlatList 
+               <FlatList
         data={Word}
-        renderItem={({ item }) => <VocabCategories navigation={navigation} item={item} ></VocabCategories>}
+        renderItem={({ item }) => <VocabCategories navigation={navigation} item={item} />}
         keyExtractor={item => item.id}
         style={styles.box}
       />
-    
+
 
     </View>
     );
@@ -25,11 +25,11 @@ export default function VocabScreen({navigation}){
 const styles = StyleSheet.create({
   fullbox:
   {
-      flex: 1, 
+      flex: 1,
       justifyContent: 'center',
           alignItems: 'center',
           backgroundColor:"white",
-      
+
   },
   box:
   {
