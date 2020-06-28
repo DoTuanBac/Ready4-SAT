@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   box:
   {
-      width:'90%',
+      width:'100%',
   }
 
 })

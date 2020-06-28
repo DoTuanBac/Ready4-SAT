@@ -8,9 +8,9 @@ export default function VocabItem(props){
     return(
     
 
-            <TouchableOpacity style={styles.listbox} onPress={() => props.navigation.navigate('Learn',{words:props.words})} >
+            <TouchableOpacity style={styles.listbox} onPress={() => props.navigation.navigate('Learn',{words:props.words,id:0})} >
             <Text style={styles.basicWord2}>{props.name}</Text>
-            <Text style={styles.mastered2}>{getMasteredWords(props.words)}</Text>
+            <Text style={styles.mastered2}>{getMasteredWords(props.words)} Mastered</Text>
             <View style={styles.progressBarContainer}>
                 <ProgressBar percent={getPercentWords(props.words)}/>
             </View>  

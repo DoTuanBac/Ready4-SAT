@@ -2,12 +2,15 @@ import React,{ useState } from 'react'
 import { View, Text,StyleSheet,TouchableOpacity } from 'react-native'
 import TestDetail from '../components/Test/TestDetail'
 import Finish from '../components/Vocab/Finish'
+import { AntDesign } from '@expo/vector-icons'; 
+
 export default function TestDetailScreen({route,navigation}){
     const [count, setCount] = useState(0);
     const [check, setCheck ]= useState(false)
     const [score, setScore] = useState(0);
     const { questions } = route.params;
     var x=0;
+    var progress='0%';
     function checkcheck()
     {
         if(check==true)  setCheck(false);
@@ -17,21 +20,21 @@ export default function TestDetailScreen({route,navigation}){
     {
         if(count==x)
         {
-           
+            progress
     return(
         <View style={styles.fullbox}>
              
-            <TestDetail question={question} check={check}></TestDetail>
+            <TestDetail question={question} check={check} progress={(count+1)*100/questions.length+'%'}></TestDetail>
               
             <View style={styles.bottom}>
            <TouchableOpacity onPress={() => {setCount(count-1), setCheck(false)}}>
-               <Text style={{color:"white"}}>Previous</Text>    
+              <AntDesign name="leftcircleo" size={24} color="white" /> 
            </TouchableOpacity>
            <TouchableOpacity onPress={() => checkcheck()}>
-               <Text style={{color:"white"}}>Check</Text>    
+           <AntDesign name="checkcircleo" size={24} color="white" />  
            </TouchableOpacity>
            <TouchableOpacity onPress={() => {setCount(count+1), setCheck(false)}}>
-               <Text style={{color:"white"}}>Next</Text>    
+           <AntDesign name="rightcircleo" size={24} color="white" />
            </TouchableOpacity>
            </View>
         
@@ -42,7 +45,7 @@ export default function TestDetailScreen({route,navigation}){
 x++;
 }
 return(
-   <Finish score={score} sum={x} route={"Test"} navigation={navigation}></Finish>
+   <Finish score={score} sum={questions.length} route={"Test"} navigation={navigation}></Finish>
  );
 
 }
@@ -60,7 +63,7 @@ backgroundColor:"white",
     {
         position: 'absolute',
         bottom:0,
-        backgroundColor:'#05B5CC',
+        backgroundColor:'#0a566b',
         width:'100%',
         borderBottomEndRadius: 4,
         padding:10,

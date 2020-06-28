@@ -11,7 +11,7 @@ export default function TestCategories(props){
         <TouchableOpacity  style={styles.box} onPress={() => props.navigation.navigate('Question',{questions:props.item.questions})}>
             
             <Text style={styles.basicWord}>{props.item.name}</Text>
-            <Text style={styles.mastered}>{getMastered(props.item.questions)}</Text>
+            <Text style={styles.mastered}>{getMastered(props.item.questions)} Mastered</Text>
             <View style={styles.progressBarContainer}>
                 <ProgressBar percent={getPercent(props.item.questions)}/>
             </View>  

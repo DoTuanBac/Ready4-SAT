@@ -11,7 +11,7 @@ export default function Finish(props){
          <Text style={styles.finishText}>Finish</Text>
         </TouchableOpacity>  
 
-  </LinearGradient>
+     </LinearGradient>
     )
 }
 
@@ -44,6 +44,7 @@ finishButton:
     width:'90%',
     textAlign:"center",
     justifyContent: 'center',
+    alignItems: 'center',
 
 },
 finishText:
@@ -53,6 +54,8 @@ finishText:
     paddingHorizontal:30,
     fontSize:20,
     fontWeight:"bold",
+    textAlign:"center",
+    justifyContent: 'center',
   
     
     

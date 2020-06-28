@@ -1,24 +1,47 @@
-import React from "react";
+import React,{ useState } from 'react'
 import { View, Text,StyleSheet, } from 'react-native'
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
-
+import ProgressBar from '../../components/Home/ProgressBar'
 
 export default function TestDetail(props){
-    
+  const [checked, setChecked] = useState(-1);
+
     if(!props.check)
     return(
         <View style={styles.fullbox}>
-       <Text style={styles.title} >{props.question.title}</Text>
+  
+       <View style={styles.title} >
+       <Text style={{color:'white',marginTop:5,}}>{props.progress}</Text>
+         <View style={styles.progessbar}><ProgressBar   percent={props.progress}></ProgressBar></View></View>
             <Text style={styles.question} >{props.question.question}</Text>
 
-             <RadioForm
-          radio_props={props.question.answers}
-          initial={-1}
-          onPress={(value) => {value}}
+            <RadioForm animation={true} style={styles.radiobtn} >
+  {
+    props.question.answers.map((obj, i) => (
+      <RadioButton  style={styles.button} >   
+        <RadioButtonInput
+          obj={obj}
+          index={i}
+          isSelected={checked==i}
+          buttonColor={checked == i?'green':'#000000'}
+          onPress={() => setChecked(i)}
           buttonSize={10}
-          style={styles.radiobtn}
-        
-             />
+  
+        />
+        <RadioButtonLabel
+          obj={obj}
+          index={i}
+          labelHorizontal={true}
+          labelWrapStyle={{}}
+          labelColor={checked == i?'green':'#000000'}
+
+          onPress={() => setChecked(i)}
+
+        />
+      </RadioButton>
+    ))
+  }  
+</RadioForm>
 
 
   </View>
@@ -26,18 +49,21 @@ export default function TestDetail(props){
     else{
         return(
             <View style={styles.fullbox}>
-           <Text style={styles.title} >{props.question.title}</Text>
+              
+        <View style={styles.title} >
+        <Text style={{color:'white',marginTop:5,}}>{props.progress}</Text>
+          <View style={styles.progessbar}><ProgressBar   percent={props.progress}></ProgressBar></View></View>
                 <Text style={styles.question} >{props.question.question}</Text>
     
                 <RadioForm animation={true} style={styles.radiobtn} >
   {
     props.question.answers.map((obj, i) => (
-      <RadioButton  >   
+      <RadioButton  style={styles.button} >   
         <RadioButtonInput
           obj={obj}
           index={i}
           isSelected={ props.question.correct == i}
-          buttonColor={props.question.correct == i?'red':'#2196f3'}
+          buttonColor={props.question.correct == i?'red':'#000000'}
 
 
           buttonSize={10}
@@ -48,7 +74,7 @@ export default function TestDetail(props){
           index={i}
           labelHorizontal={true}
           labelWrapStyle={{}}
-          labelColor={props.question.correct == i?'red':'#2196f3'}
+          labelColor={props.question.correct == i?'red':'#000000'}
 
         />
       </RadioButton>
@@ -70,15 +96,18 @@ const styles = StyleSheet.create({
  
     title:
     {
-        backgroundColor:'#05B5CC',
-        textAlign: 'center',
+        backgroundColor:'#0a566b',
         width:'100%',
-        fontSize:20,
-        fontWeight:"bold",
-        color:'white',
+        justifyContent: 'center',
+            alignItems: 'center',
+        
     },
 
-
+    progessbar:
+    {
+      width:'90%',
+      marginBottom:15,
+    },
     question:
     {
        fontSize:16,
@@ -86,7 +115,8 @@ const styles = StyleSheet.create({
         backgroundColor:"#f0f0f0",
         width:'100%',
         padding:10,
-        fontSize:15,
+    
+
         
     },
     
@@ -101,4 +131,11 @@ const styles = StyleSheet.create({
         fontSize:15,
         fontWeight:"bold",
     },
+    button:
+    {
+      width:'100%',
+      borderColor:"black",
+      borderBottomWidth:1,
+      padding:10,
+    }
 })  

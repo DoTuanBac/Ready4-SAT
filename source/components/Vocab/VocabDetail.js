@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     word2:{
-        fontSize:30,
-        fontWeight:"bold",
+        fontSize:15,
+        padding:5,
         color:'white',
      
 
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
           marginTop:10,
             fontSize:15,
             color:'#cdccd5',
+            
     },
     pronounce:
     {

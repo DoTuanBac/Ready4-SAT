@@ -2,14 +2,17 @@ import React,{ useState } from 'react'
 import { View, Text,StyleSheet,TouchableOpacity,FlatList} from 'react-native'
 import VocabDetail from '../components/Vocab/VocabDetail'
 import Finish from '../components/Vocab/Finish'
-
+import { AntDesign } from '@expo/vector-icons'; 
 export default function VocabDetailScreen({route,navigation}){
-    const [count, setCount] = useState(0);
+    const {id}=route.params;
+    const [count, setCount] = useState(id);
     const [score, setScore] = useState(0);
     const { words } = route.params;
+    
     var x=0;
     for(let item of words)
     {
+
         if(count==x)
         {
             return(
@@ -19,12 +22,14 @@ export default function VocabDetailScreen({route,navigation}){
                     
                     <View style={styles.bottom}>
            
-                <TouchableOpacity onPress={() => setCount(count+1)}>
-                    <Text style={{color:"white"}}>Don't know</Text>    
+                <TouchableOpacity  style={styles.bottombutton} onPress={() => setCount(count+1)}>
+                <AntDesign name="closecircleo" size={24} color="red" />
+                    <Text style={{color:"red"}}>Don't know</Text>    
                 </TouchableOpacity>
              
-                <TouchableOpacity onPress={() => {setCount(count+1),setScore(score+1)}}>
-                    <Text style={{color:"white"}}>Master</Text>    
+                <TouchableOpacity  style={styles.bottombutton} onPress={() => {setCount(count+1),setScore(score+1)}}>
+                <AntDesign name="checkcircleo" size={24} color="green" />
+                    <Text style={{color:"green"}}>Master</Text>    
                 </TouchableOpacity>
            
                     </View>
@@ -65,7 +70,8 @@ const styles = StyleSheet.create({
     {
         position: 'absolute',
         bottom:0,
-        backgroundColor:'#05B5CC',
+        borderColor:'#05B5CC',
+        borderTopWidth:1,
         width:'100%',
         borderBottomEndRadius: 4,
         padding:10,
@@ -74,6 +80,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
     },
-
+    bottombutton:
+    {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 
 })  
