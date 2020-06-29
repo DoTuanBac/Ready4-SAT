@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity, View,Text } from 'react-native';
-import { Feather, SimpleLineIcons, FontAwesome,Entypo,AntDesign } from '@expo/vector-icons'
+import {Feather, SimpleLineIcons, FontAwesome, Entypo, Fontisto, AntDesign} from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
 import LeaderboardScreen from '../screens/LeaderboardScreen'
 import AnalyticsScreen from '../screens/AnalyticsScreen'
@@ -16,12 +16,14 @@ import VocabListScreen from '../screens/VocabListScreen'
 import MyProfileScreen from "../screens/MyProfileScreen";
 import MyTestScreen from "../screens/MyTestScreen";
 import NewsFeedScreen from "../screens/NewsFeedScreen";
-
 import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import RegisterDetailScreen from '../screens/RegisterDetailScreen'
 import IntroduceScreen from '../screens/IntroduceScreen'
 import ForgotScreen from '../screens/ForgotScreen'
+import NewsFeedDetailScreen from "../screens/NewsFeedDetailScreen";
+import BookmarkedScreen from "../screens/BookmarkedScreen";
+
 const Stack = createStackNavigator();
 
 export default function HomeStack(props) {
@@ -147,9 +149,59 @@ export default function HomeStack(props) {
           component={MyTestScreen}
       />
       <Stack.Screen
+          name="Bookmarked"
+          component={BookmarkedScreen}
+          options={{
+              headerStyle: {backgroundColor: '#0084ad'},
+              title: '',
+              headerLeft: () =>
+                  <TouchableOpacity
+                      onPress={() => props.navigation.goBack()}
+                      style={{marginLeft: 16}}
+                  >
+                      <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
+                  </TouchableOpacity>
+          }}
+      />
+      <Stack.Screen
           name="NewsFeed"
           component={NewsFeedScreen}
+          options={{
+              headerStyle: {backgroundColor: '#0084ad'},
+              headerLeft: () =>
+                  <TouchableOpacity
+                      onPress={() => props.navigation.goBack()}
+                      style={{marginLeft: 16}}
+                  >
+                      <AntDesign name="left" size={24} color="white" />
+                  </TouchableOpacity>,
+
+              headerRight: () =>
+                  <TouchableOpacity
+                      onPress={() => props.navigation.navigate('Bookmarked')}
+                      style={{marginRight: 16}}
+                  >
+                      <Fontisto name="bookmark" size={20} color="white" />
+                  </TouchableOpacity>
+          }}
       />
+      <Stack.Screen
+          name="NewsFeedDetail"
+          component={NewsFeedDetailScreen}
+          options={{
+              headerStyle: {backgroundColor: '#0084ad'},
+              title: '',
+              headerLeft: () =>
+                  <TouchableOpacity
+                      onPress={() => props.navigation.goBack()}
+                      style={{marginLeft: 16}}
+                  >
+                      <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
+                  </TouchableOpacity>
+
+          }}
+      />
+
       <Stack.Screen
         name="Practice"
         component={PracticeScreen}
@@ -224,86 +276,86 @@ export default function HomeStack(props) {
 
 
 
-<Stack.Screen 
-        name="Login" 
+<Stack.Screen
+        name="Login"
         component={LoginScreen}
         options={{
           headerStyle: {backgroundColor: '#0a566b'},
           title: '',
-          headerLeft: () => 
+          headerLeft: () =>
             <TouchableOpacity
               onPress={() => props.navigation.goBack()}
               style={{marginLeft: 16}}
             >
              <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Cancel</Text>
             </TouchableOpacity>,
-        
+
           }}
       />
-      <Stack.Screen 
-        name="Forgot" 
+      <Stack.Screen
+        name="Forgot"
         component={ForgotScreen}
         options={{
           headerStyle: {backgroundColor: '#0a566b'},
           title: '',
-          headerLeft: () => 
+          headerLeft: () =>
             <TouchableOpacity
               onPress={() => props.navigation.goBack()}
               style={{marginLeft: 16}}
             >
              <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Cancel</Text>
             </TouchableOpacity>,
-        
+
           }}
       />
-        <Stack.Screen 
-        name="Register" 
+        <Stack.Screen
+        name="Register"
         component={RegisterScreen}
         options={{
           headerStyle: {backgroundColor: '#0a566b'},
           title: '',
-          headerLeft: () => 
+          headerLeft: () =>
             <TouchableOpacity
               onPress={() => props.navigation.goBack()}
               style={{marginLeft: 16}}
             >
              <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
             </TouchableOpacity>,
-        
+
           }}
       />
-        <Stack.Screen 
-        name="RegisterDetail" 
+        <Stack.Screen
+        name="RegisterDetail"
         component={RegisterDetailScreen}
         options={{
           headerStyle: {backgroundColor: '#0a566b'},
           title: '',
-          headerLeft: () => 
+          headerLeft: () =>
             <TouchableOpacity
               onPress={() => props.navigation.goBack()}
               style={{marginLeft: 16}}
             >
              <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
             </TouchableOpacity>,
-        
+
           }}
       />
-        <Stack.Screen 
-        name="Introduce" 
+        <Stack.Screen
+        name="Introduce"
         component={IntroduceScreen}
         options={{
           headerStyle: {backgroundColor: 'white'},
           title: '',
-          headerLeft: () => 
+          headerLeft: () =>
           <View></View>,
-          headerRight: () => 
+          headerRight: () =>
             <TouchableOpacity
              onPress={() =>props.navigation.navigate('Login')}
               style={{marginRight: 16}}
             >
              <Text style={{color:"black", fontWeight:"bold",fontSize:16}}>Log In</Text>
             </TouchableOpacity>,
-        
+
           }}
       />
     </Stack.Navigator>

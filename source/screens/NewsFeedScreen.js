@@ -10,7 +10,7 @@ export default function NewsFeedScreen(props) {
                 data={NewsFeed}
                 renderItem={({ item }) =>
                     <NewsFeedItemView
-                        navigation={item.navigation}
+                        navigation={props.navigation}
                         schoolName={item.schoolName}
                         date={item.date}
                         title={item.title}
@@ -24,6 +24,6 @@ export default function NewsFeedScreen(props) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
+        //backgroundColor: '#fff',
     }
 });
