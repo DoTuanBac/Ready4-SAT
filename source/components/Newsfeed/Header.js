@@ -6,7 +6,7 @@ export default function Header(props){
         <View style={styles.header}>
             <Image
                 style={styles.schoolImage}
-                source={{uri: 'https://reactjs.org/logo-og.png'}}
+                source={{ uri: 'https://i.pinimg.com/originals/8b/fc/ca/8bfcca370c6bb17bfc563d28b5c16db4.jpg' }}
             />
             <View style={styles.school}>
                 <Text style={styles.schoolName}>{props.schoolName}</Text>
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
         height: 40,
         width: 40,
         margin: 5,
-
     },
     school: {
         marginLeft: 5,

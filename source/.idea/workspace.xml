@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d0e0c25-6ee6-49e5-be4b-daa3ca56452a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Newsfeed/BookmarkItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Newsfeed/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/BookmarkedScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/Avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/Avatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LeaderBoard/TopLeaderBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeaderBoard/TopLeaderBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LeaderBoard/UserTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeaderBoard/UserTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Analytics/Analysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Analytics/Analysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Analytics/CircularProcess.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Analytics/CircularProcess.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Analytics/TimeBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Analytics/TimeBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/Score.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/Score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Newsfeed/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsfeed/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Newsfeed/NewsFeedItemView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsfeed/NewsFeedItemView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Test/TestCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Test/TestCategories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/newsfeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/newsfeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/HomeStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/HomeStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/IntroduceScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/IntroduceScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/AnalyticsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AnalyticsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/LeaderboardScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LeaderboardScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MyProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MyTestScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyTestScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/NewsFeedDetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/NewsFeedDetailScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/NewsFeedScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/NewsFeedScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
@@ -61,6 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -74,6 +80,7 @@
       <updated>1593362336329</updated>
       <workItem from="1593362343364" duration="4091000" />
       <workItem from="1593407508682" duration="7468000" />
+      <workItem from="1593456947735" duration="4442000" />
     </task>
     <servers />
   </component>
@@ -85,21 +92,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593420574336" />
-    <state width="1323" height="131" key="GridCell.Tab.0.bottom" timestamp="1593378651178">
+    <state width="1323" height="130" key="GridCell.Tab.0.bottom" timestamp="1593456943215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="131" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593378651178" />
-    <state width="1323" height="131" key="GridCell.Tab.0.center" timestamp="1593378651177">
+    <state width="1323" height="130" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593456943215" />
+    <state width="1323" height="130" key="GridCell.Tab.0.center" timestamp="1593456943215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="131" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593378651177" />
-    <state width="1323" height="131" key="GridCell.Tab.0.left" timestamp="1593378651177">
+    <state width="1323" height="130" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593456943215" />
+    <state width="1323" height="130" key="GridCell.Tab.0.left" timestamp="1593456943214">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="131" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593378651177" />
-    <state width="1323" height="131" key="GridCell.Tab.0.right" timestamp="1593378651177">
+    <state width="1323" height="130" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593456943214" />
+    <state width="1323" height="130" key="GridCell.Tab.0.right" timestamp="1593456943215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="131" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593378651177" />
+    <state width="1323" height="130" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593456943215" />
+    <state x="129" y="55" key="MergeDialog" timestamp="1593445349637">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593445349637" />
+    <state x="563" y="230" key="MultipleFileMergeDialog" timestamp="1593445349647">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="563" y="230" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593445349647" />
   </component>
 </project>

@@ -4,9 +4,6 @@ import {AntDesign, Entypo, SimpleLineIcons} from "@expo/vector-icons";
 import TouchableOpacity from "react-native-web/dist/exports/TouchableOpacity";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-
-//const windowWidth = Dimensions.get('window').width;
-
 export default function MyTestScreen(props) {
     const [date, setDate] = React.useState(new Date(1598051730000));
     const [show, setShow] = React.useState(false);
@@ -56,11 +53,10 @@ export default function MyTestScreen(props) {
                 <AntDesign name="flag" size={20} color="#050430" />
                 <Text style={{color: 'gray', marginLeft: 10, height: 26, marginTop: 10,}}>Final Score</Text>
             </TouchableOpacity>
-            
 
-            { visible &&
+
+            {/*{ visible &&
             <View style={{height: Dimensions.get('window').height, width: Dimensions.get('window').width, position: "absolute", backgroundColor: 'black', opacity: 0.5}}>
-            
                 <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
                     <View style={{height: 50, width: 50,}} >
                         <Text>Modal</Text>
@@ -75,7 +71,7 @@ export default function MyTestScreen(props) {
                     </View>
                 </View>
             </View>
-            }
+            }*/}
         </View>
     );
 }

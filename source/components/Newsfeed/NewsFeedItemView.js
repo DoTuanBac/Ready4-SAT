@@ -4,7 +4,7 @@ import {AntDesign, EvilIcons, Fontisto} from '@expo/vector-icons';
 import Header from "./Header";
 
 export default function NewsFeedItemView(props) {
-    const { schoolName, date, title, navigation } = props;
+    const { schoolName, date, title, imageSource, content, navigation } = props;
     const [count, setCount] = useState(123);
     const [click, setClick] = useState(1);
     const [isChange, setChange] = useState(false);
@@ -12,8 +12,10 @@ export default function NewsFeedItemView(props) {
     const handleGoToDetail = React.useCallback(() => {
         navigation.navigate('NewsFeedDetail', {
             schoolName,
+            imageSource,
             date,
             title,
+            content,
         });
     },[navigation]);
 
@@ -37,7 +39,7 @@ export default function NewsFeedItemView(props) {
                 <Text style={styles.title}>{title}</Text>
                 <Image
                     style={styles.image}
-                    source={{uri: 'https://picsum.photos/id/103/367/267'}}
+                    source={{uri: imageSource}}
                 />
             </TouchableOpacity>
             <View style={styles.footer}>

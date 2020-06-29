@@ -32,6 +32,9 @@ const styles = StyleSheet.create({
     progressBarContainer: {
         margin:5,
         width:'90%',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#d3d3d3',
     },
 
     basicWord: {

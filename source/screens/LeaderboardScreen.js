@@ -10,19 +10,7 @@ export default function LeaderboardScreen({navigation}) {
         return b.points - a.points;
     });
     return (
-        <LinearGradient style={styles.fullbox} colors={['#0a566b', '#14ccff']}>
-
-            {/* {/* <View style={styles.subHeader}>
-
-                <TouchableOpacity onPress={() => navigation.navigate('Test')}>
-                    <Text style={styles.contentText}>All time</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Vocab')}>
-                    <Text style={styles.contentText}>Location</Text>
-                </TouchableOpacity>
-            </View>
-            <Text style={styles.title}>Ha Noi</Text> */}
-
+        <LinearGradient style={styles.fullbox} colors={['#0E2C3D', '#14ccff']}>
             <View style={styles.BoxTop}>
                 <TopLeaderBoard top={2} user={User[1]}/>
                 <TopLeaderBoard top={1} user={User[0]}/>
