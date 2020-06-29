@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 import { TouchableOpacity, View,Text } from 'react-native';
 import { Feather, SimpleLineIcons, FontAwesome,Entypo,AntDesign } from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
@@ -82,6 +82,18 @@ export default function HomeStack(props) {
       <Stack.Screen
         name="Analytics"
         component={AnalyticsScreen}
+        options={{
+          headerStyle: {backgroundColor: '#05B5CC'},
+          headerTintColor: {color: 'white'},
+          headerTitleStyle: {color: 'white'},
+          headerLeft: () =>
+            <TouchableOpacity
+              onPress={() => props.navigation.goBack()}
+              style={{marginLeft: 16}}
+            >
+              <AntDesign name='arrowleft' size={24} color={'white'}/>
+            </TouchableOpacity>,
+        }}
       />
       <Stack.Screen
         name="Schools"
@@ -161,6 +173,18 @@ export default function HomeStack(props) {
       <Stack.Screen
           name="NewsFeed"
           component={NewsFeedScreen}
+          options={{
+            headerStyle: {backgroundColor: '#0E2C3D'},
+            headerTintColor: {color: 'white'},
+            headerTitleStyle: {color: 'white'},
+            headerLeft: () =>
+              <TouchableOpacity
+                onPress={() => props.navigation.goBack()}
+                style={{marginLeft: 16}}
+              >
+                <AntDesign name='arrowleft' size={24} color={'white'}/>
+              </TouchableOpacity>,
+          }}
       />
       <Stack.Screen
         name="Practice"
