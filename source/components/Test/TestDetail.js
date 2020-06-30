@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        backgroundColor:'#082e38',
+        backgroundColor:'#0a566b',
         width:'100%',
         justifyContent: 'center',
         alignItems: 'center',

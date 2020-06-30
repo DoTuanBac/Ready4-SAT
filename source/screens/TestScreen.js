@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 export default function TestScreen({navigation}){
         return(
-            <LinearGradient style={styles.fullbox}  colors={[ '#082e38','#118cad']}>
+            <LinearGradient style={styles.fullbox}  colors={[ '#0a566b','#118cad']}>
             <FlatList
                 data={Test}
                 renderItem={({ item }) => <TestCategories navigation={navigation} item={item} />}
