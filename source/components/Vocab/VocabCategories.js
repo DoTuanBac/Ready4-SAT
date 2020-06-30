@@ -9,38 +9,35 @@ export default function VocabCategories(props){
 
     if(count%2===1)
     return(
-        <View  style={styles.fullbox}>
+        <View  style={styles.fullbox2}>
         <TouchableOpacity  style={styles.box} onPress={() => setCount(count+1)} >
 
             <Text style={styles.basicWord}>{props.item.name}</Text>
         <Text style={styles.mastered}>{getMasteredCategories(props.item.categories)} Mastered</Text>
             <View style={styles.progressBarContainer}>
-            <ProgressBar percent={getPercentCategories(props.item.categories)}/>
+                <ProgressBar borderColor='#0084ad' backgroundColor='#a1e6f0' percent={getPercentCategories(props.item.categories)}/>
             </View>
             <View style={styles.listbox}>
-            <FlatList
-        data={props.item.categories}
-        horizontal={true}
-        renderItem={({ item }) => <VocabItem navigation={props.navigation} name={item.name} words={item.words}/>}
-        keyExtractor={item => item.id}
-      />
-
-
-
-        </View>
+                <FlatList
+                    data={props.item.categories}
+                    horizontal={true}
+                    renderItem={({ item }) => <VocabItem navigation={props.navigation} name={item.name} words={item.words}/>}
+                    keyExtractor={item => item.id}
+                  />
+            </View>
 
         </TouchableOpacity>
         </View>
     );
     if(count%2===0)
     return(
-        <View  style={styles.fullbox}>
+        <View  style={styles.fullbox1}>
         <TouchableOpacity  style={styles.box2} onPress={() => setCount(count+1)} >
 
             <Text style={styles.basicWord2}>{props.item.name}</Text>
             <Text style={styles.mastered2}>{getMasteredCategories(props.item.categories)} Mastered</Text>
             <View style={styles.progressBarContainer}>
-                <ProgressBar percent={getPercentCategories(props.item.categories)}/>
+                <ProgressBar borderColor='#a1e6f0' backgroundColor='#a1e6f0' percent={getPercentCategories(props.item.categories)}/>
             </View>
 
 
@@ -53,35 +50,46 @@ export default function VocabCategories(props){
 }
 
 const styles = StyleSheet.create({
-    fullbox: {
-        width:'100%',
+    fullbox1: {
         flex: 1,
         justifyContent: 'center',
-            alignItems: 'center',
+        alignItems: 'center',
+        marginTop: 10,
+        marginLeft: 10,
+        marginRight: 10,
+        backgroundColor: '#fff'
+    },
+    fullbox2: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff'
     },
     listbox: {
-        width:'90%',
+        width:'98%',
+        paddingTop: 10,
     },
     box: {
         justifyContent: 'center',
         alignItems: 'center',
         padding:30,
-        backgroundColor: '#0084ad',
+        backgroundColor: '#0a566b',
         width:'100%',
     },
     box2: {
         justifyContent: 'center',
         alignItems: 'center',
         padding:30,
-        borderColor: '#05B5CC',
-        borderWidth:1,
-        width:'90%',
-        marginVertical:20,
-        borderRadius:10,
+        borderColor: '#5ca2ab',
+        borderWidth:0.8,
+        width:'97%',
+        marginVertical:10,
+        //borderRadius:10,
     },
     progressBarContainer : {
-        margin:5,
+        margin:10,
         width:'90%',
+        marginBottom: 20,
     },
     basicWord: {
         fontSize: 25,

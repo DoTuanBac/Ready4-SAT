@@ -126,9 +126,10 @@ export default function HomeStack(props) {
         name="Vocab"
         component={VocabScreen}
          options={{
-          headerStyle: {backgroundColor: '#0084ad'},
-          headerTintColor: 'white',
-          headerTitleStyle: {color: 'white', marginLeft: -28,},
+              headerStyle: {backgroundColor: '#0a566b'},
+              headerTintColor: 'white',
+              title: 'Vocabulary',
+              headerTitleStyle: {color: 'white', marginLeft: -28,},
           headerRight: () =>
           <TouchableOpacity   onPress={() =>props.navigation.navigate('VocabHelp')}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -202,7 +203,7 @@ export default function HomeStack(props) {
         name="Learn"
         component={VocabDetailScreen}
         options={{
-          headerStyle: {backgroundColor: '#0084ad'},
+          headerStyle: {backgroundColor: '#0a566b'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity
@@ -233,14 +234,14 @@ export default function HomeStack(props) {
         name="VocabHelp"
         component={VocabHelpScreen}
         options={{
-          headerStyle: {backgroundColor: '#0084ad'},
+          headerStyle: {backgroundColor: '#0a566b'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity
               onPress={() => props.navigation.goBack()}
               style={{marginLeft: 16}}
             >
-             <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
+             <Text style={{color:"white", fontWeight:"bold", fontSize:16}}>Back</Text>
             </TouchableOpacity>,
 
           }}
@@ -258,7 +259,6 @@ export default function HomeStack(props) {
             >
              <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
             </TouchableOpacity>,
-
           }}
       />
 

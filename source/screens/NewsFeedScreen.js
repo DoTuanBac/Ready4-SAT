@@ -11,7 +11,7 @@ export default function NewsFeedScreen(props) {
                 renderItem={({ item }) =>
                     <NewsFeedItemView
                         navigation={props.navigation}
-                        image={item.imageSource}
+                        imageSource={item.imageSource}
                         schoolName={item.schoolName}
                         date={item.date}
                         title={item.title}

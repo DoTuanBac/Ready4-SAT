@@ -5,7 +5,7 @@ export default function ProgressBar(props){
     return(
          <View style={{
                 height: 8,
-                borderWidth: 1,
+                borderWidth: 0.8,
                 borderColor: props.borderColor || 'white',
                 borderRadius: 4,
                 flexDirection: 'row',
@@ -13,9 +13,9 @@ export default function ProgressBar(props){
             }}>
                 <View style={{
                     width: props.percent,
-                    backgroundColor: '#F1D513',
-                    height: 6,
-                    borderLeftRadius: 3,
+                    backgroundColor: props.backgroundColor || '#F1D513',
+                    height: 8,
+                    borderRadius: 4,
                 }}>
             </View>
         </View>
