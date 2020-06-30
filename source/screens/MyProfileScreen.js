@@ -1,9 +1,13 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput, Image} from 'react-native'
+import {View, Text, StyleSheet, TextInput, Image,TouchableOpacity} from 'react-native'
 import {LinearGradient} from "expo-linear-gradient";
 import { AntDesign } from '@expo/vector-icons';
 import {Profile} from "../data/profile";
-import TouchableOpacity from "react-native-web/dist/exports/TouchableOpacity";
+
+
+
+
+
 
 export default function MyProfileScreen(props){
     const [value, onChangeText] = React.useState('Mai V');
@@ -42,12 +46,13 @@ export default function MyProfileScreen(props){
                     <Text style={{color: '#e5e5e5'}}>Type Display Name</Text>
                 </View>
                 <TextInput
-                    flex center
-                    style={styles.name}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
-                />
+                  
+                  style={styles.name}
+                  onChangeText={text => onChangeText(text)}
+                  value={value}
+              />
             </View>
+           
             <View style={styles.profileDetail}>
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>Email</Text>
@@ -105,9 +110,10 @@ export const styles = StyleSheet.create({
     border:{
         borderRadius: 100,
         width: 100,
+        height:100,
         borderColor: '#14ccff',
         borderWidth: 5,
-        flex: 1,
+
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -115,16 +121,15 @@ export const styles = StyleSheet.create({
         height: 30,
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
-        color: '#fff',
+        color: 'white',
         textAlign: 'center',
+        fontSize:20,
+       
     },
     detail: {
-        flex: 1,
+
         flexDirection: 'row',
-        paddingTop: 11,
-        paddingBottom: 11,
-        paddingLeft: 11,
-        paddingRight: 11,
+        padding: 11,
         justifyContent: 'space-between',
         alignItems: 'center',
         borderBottomColor: '#d3d3d3',

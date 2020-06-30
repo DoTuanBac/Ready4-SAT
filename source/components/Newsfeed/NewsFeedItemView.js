@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {AntDesign, EvilIcons, Fontisto} from '@expo/vector-icons';
+import {AntDesign, EvilIcons,FontAwesome } from '@expo/vector-icons';
+
 import Header from "./Header";
 
 export default function NewsFeedItemView(props) {
@@ -60,8 +61,8 @@ export default function NewsFeedItemView(props) {
                     <TouchableOpacity style={{marginLeft: 6, marginBottom: 5,}} onPress={()=> setChange(!isChange)}>
                         {
                             (isChange) ?
-                                <Fontisto name="bookmark-alt" size={20} color="black" /> :
-                                <Fontisto name="bookmark" size={20} color="black" />
+                            <FontAwesome name="bookmark" size={20} color="black" />:
+                            <FontAwesome name="bookmark-o" size={20} color="black" />
                         }
                     </TouchableOpacity>
                 </View>

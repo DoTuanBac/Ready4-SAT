@@ -7,7 +7,7 @@ export default function LoginScreen({navigation}){
     const [password, onChangePassword] = useState('');
     return(
 
-        <LinearGradient style={styles.fullbox}   colors={[ '#0a566b','#14ccff']}>
+        <LinearGradient style={styles.fullbox}   colors={[ '#082e38','#118cad']}>
 
         <Text style={{color:'white',fontSize:20,fontWeight:"bold",marginTop:35}}>Login</Text>
         <TextInput
