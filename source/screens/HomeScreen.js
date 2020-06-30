@@ -5,10 +5,14 @@ import { Feather, FontAwesome, FontAwesome5 } from '@expo/vector-icons'
 import Unit from '../components/Home/Unit'
 import UnitList from '../components/Home/UnitList'
 import ProgressBar from '../components/Home/ProgressBar'
-
-import {Test} from '../data/test'
+import db from '../backend/firebase'
 
 export default function HomeScreen({navigation}){
+    // FIREBASE
+    db.firestore().collection('tests').doc('score').get().then((snapshot) => {
+        console.log(snapshot.data())
+    })
+
     const [isChange, setChange] = useState(false)
     const [isUnitOpen, setUnitOpen] = useState(false)
 
