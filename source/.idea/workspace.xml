@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6d0e0c25-6ee6-49e5-be4b-daa3ca56452a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Analytics/Analysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Analytics/Analysis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Analytics/TimeBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Analytics/TimeBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Home/Score.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/Score.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Profile/ModalView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Profile/ModalView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/UnitList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/UnitList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/newsfeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/newsfeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/DrawerContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/DrawerContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/HomeStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/HomeStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/MyProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyProfileScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MyTestScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyTestScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/TestScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TestScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <workItem from="1593362343364" duration="4091000" />
       <workItem from="1593407508682" duration="7468000" />
       <workItem from="1593456947735" duration="4676000" />
-      <workItem from="1593488242399" duration="18888000" />
+      <workItem from="1593488242399" duration="22700000" />
     </task>
     <servers />
   </component>
@@ -100,13 +99,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="130" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593456943215" />
-    <state x="129" y="55" key="MergeDialog" timestamp="1593445349637">
+    <state x="129" y="55" key="MergeDialog" timestamp="1593532078782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593445349637" />
-    <state x="563" y="230" key="MultipleFileMergeDialog" timestamp="1593445349647">
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593532078782" />
+    <state x="563" y="230" key="MultipleFileMergeDialog" timestamp="1593532078788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="563" y="230" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593445349647" />
+    <state x="563" y="230" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593532078788" />
   </component>
 </project>

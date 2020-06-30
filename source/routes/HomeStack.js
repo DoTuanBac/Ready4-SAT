@@ -258,16 +258,10 @@ export default function HomeStack(props) {
         name="VocabList"
         component={VocabListScreen}
         options={{
-          headerStyle: {backgroundColor: '#082e38'},
-          title: '',
-          headerLeft: () =>
-            <TouchableOpacity
-              onPress={() => props.navigation.goBack()}
-              style={{marginLeft: 16}}
-            >
-             <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
-            </TouchableOpacity>,
-          }}
+            headerStyle: {backgroundColor: '#0a566b'},
+            headerTintColor: 'white',
+            title: '',
+        }}
       />
 
 

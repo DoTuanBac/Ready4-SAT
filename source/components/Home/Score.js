@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import ProgressBar from './ProgressBar'
-import { AntDesign } from '@expo/vector-icons'
 import Avatar from '../Home/Avatar'
 
 export default function Score(props){
@@ -10,9 +9,9 @@ export default function Score(props){
             <View style={styles.scoreContainer}>
                 <Text style={{color: 'white', fontSize: 15, paddingTop: 15}}>Estimated Score</Text>
                 <View style={styles.score}>
-                    <View style={styles.user}>
+                    <TouchableOpacity style={styles.user}>
                         <Avatar navigation={props.navigation} color={'white'} home={true}/>
-                    </View>
+                    </TouchableOpacity>
                     <Text style={{fontSize: 60, color: 'white'}}>{props.overall}</Text>
                     <View style={[styles.skill]}>
                         <Text style={{color: 'white', fontSize: 24}}>{props.math}</Text>

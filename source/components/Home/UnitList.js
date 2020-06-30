@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native'
-import { Entypo } from '@expo/vector-icons'
+import {AntDesign, Entypo} from '@expo/vector-icons'
 
 export default function UnitList(props){
     return(
@@ -11,7 +11,9 @@ export default function UnitList(props){
                     <Text style={{fontSize: 25, paddingTop: 5, paddingLeft: 15, color: 'white'}}>Unit Heading</Text>
                     <Text style={{fontSize: 15, paddingTop: 10, paddingLeft: 15, color: 'white'}}>Unit Sub-Heading</Text>
                 </View> :
-                <View></View>
+                <View style={{alignSelf: 'center', marginTop: 10, marginBottom: -10,}}>
+                    <AntDesign name={'down'} color={'#fff'} size={18}/>
+                </View>
             }
             <FlatList
                 data={props.questions}

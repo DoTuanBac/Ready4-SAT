@@ -56,7 +56,6 @@ export default function MyProfileScreen(props){
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail} onPress={handleGoToMyTest}>
                     <Text style={styles.label}>My Tests</Text>
-                    <Text style={styles.value}> </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail} onPress={()=> setShow(!show)}>
                     <Text style={styles.label}>Test Date</Text>

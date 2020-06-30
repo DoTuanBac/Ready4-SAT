@@ -16,14 +16,14 @@ export function DrawerContent(props){
                         <View style={styles.row}>
                             <Avatar navigation={props.navigation} color={'#05B5CC'}/>
                             <View style={{flowDirection: 'column', flex: 1, padding: 10}}>
-                                <Text style={{fontWeight: 'bold', fontSize: 16}}>Username</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16}}>Mai V</Text>
                                 <View style={[styles.row, {justifyContent: 'space-between'}]}>
                                     <Text>Test Date</Text>
                                     <Text>Jul 12, 2020</Text>
                                 </View>
-                                <View style={[styles.row, {justifyContent: 'space-between'}]}> 
+                                <View style={[styles.row, {justifyContent: 'space-between'}]}>
                                     <Text>Desired Score</Text>
-                                    <Text>1200</Text>
+                                    <Text>1390</Text>
                                 </View>
                             </View>
                         </View>
@@ -31,21 +31,21 @@ export function DrawerContent(props){
 
                     <Drawer.Section style={styles.section}>
                         <View style={[styles.row, {width: '100%'}]}>
-                            <AntDesign 
+                            <AntDesign
                                 name='iconfontdesktop' color={'#05B5CC'} size={24}
                                 style={styles.icon}
                             />
                             <Text style={{color:'#05B5CC', fontSize: 16}}>Ready4 SAT Web</Text>
                         </View>
                         <View style={[styles.row, {width: '100%'}]}>
-                            <MaterialCommunityIcons 
+                            <MaterialCommunityIcons
                                 name='school' color={'#05B5CC'} size={24}
                                 style={styles.icon}
                             />
                             <Text style={{color:'#05B5CC', fontSize: 16}}>My Schools</Text>
                         </View>
                         <View style={[styles.row, {width: '100%'}]}>
-                            <FontAwesome5 
+                            <FontAwesome5
                                 name='school' color={'#05B5CC'} size={20}
                                 style={styles.icon}
                             />
