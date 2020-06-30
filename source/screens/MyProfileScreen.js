@@ -2,12 +2,11 @@ import React from 'react'
 import {View, Text, StyleSheet, TextInput, Image, TouchableOpacity, Platform} from 'react-native'
 import {LinearGradient} from "expo-linear-gradient";
 import { AntDesign } from '@expo/vector-icons';
-import {Profile} from "../data/profile";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
 export default function MyProfileScreen(props){
     const [value, onChangeText] = React.useState('Mai V');
-    const [user] = React.useState(Profile);
+    //const [user, setUser] = React.useState(Profile);
     const [score, setScore] = React.useState(1390);
     const [date, setDate] = React.useState(new Date());
     const [show, setShow] = React.useState(false);
@@ -57,7 +56,7 @@ export default function MyProfileScreen(props){
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail} onPress={handleGoToMyTest}>
                     <Text style={styles.label}>My Tests</Text>
-                    <Text style={styles.value}>{user.myTest}</Text>
+                    <Text style={styles.value}> </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail} onPress={()=> setShow(!show)}>
                     <Text style={styles.label}>Test Date</Text>
@@ -75,7 +74,6 @@ export default function MyProfileScreen(props){
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>Desired Score</Text>
                     <Text style={styles.value}>{score}</Text>
-                    {/*<AntDesign name="right" size={24} color="white" />*/}
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>My Schools</Text>
@@ -95,9 +93,9 @@ export const styles = StyleSheet.create({
         flex: 1,
     },
     profile: {
-        margin: 10,
+        margin: 5,
         alignItems: 'center',
-        marginBottom: 20,
+        marginBottom: 30,
     },
     profileDetail: {
     },
@@ -121,17 +119,17 @@ export const styles = StyleSheet.create({
     },
     name: {
         height: 30,
+        paddingLeft: 50,
+        paddingRight: 50,
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
         color: 'white',
         textAlign: 'center',
-        fontSize:20,
-
+        fontSize:18,
     },
     detail: {
-
         flexDirection: 'row',
-        padding: 11,
+        padding: 15,
         justifyContent: 'space-between',
         alignItems: 'center',
         borderBottomColor: '#d3d3d3',

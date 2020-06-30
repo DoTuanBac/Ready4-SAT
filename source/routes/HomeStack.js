@@ -99,8 +99,7 @@ export default function HomeStack(props) {
         name="Test"
         component={TestScreen}
         options={{
-
-            headerStyle: {backgroundColor: '#0a566b'},
+            headerStyle: {backgroundColor: '#0E2C3D'},
             headerTintColor: 'white',
             title: '',
             headerTitleStyle: {color: 'white', marginLeft: -28,}
@@ -169,7 +168,7 @@ export default function HomeStack(props) {
           name="Bookmarked"
           component={BookmarkedScreen}
           options={{
-              headerStyle: {backgroundColor: '#0E2C3D'},
+              headerStyle: {backgroundColor: '#0a566b'},
               headerTintColor: 'white',
               headerTitleStyle: {color: 'white', marginLeft: -28,},
           }}
@@ -178,7 +177,7 @@ export default function HomeStack(props) {
           name="NewsFeed"
           component={NewsFeedScreen}
           options={{
-            headerStyle: {backgroundColor: '#0E2C3D'},
+            headerStyle: {backgroundColor: '#0a566b'},
             headerTintColor: 'white',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
               headerRight: () =>
@@ -194,7 +193,7 @@ export default function HomeStack(props) {
           name="NewsFeedDetail"
           component={NewsFeedDetailScreen}
           options={{
-              headerStyle: {backgroundColor: '#0E2C3D'},
+              headerStyle: {backgroundColor: '#0a566b'},
               headerTintColor: 'white',
               title: '',
               headerTitleStyle: {color: 'white', marginLeft: -28,},

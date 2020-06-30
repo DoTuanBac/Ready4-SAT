@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6d0e0c25-6ee6-49e5-be4b-daa3ca56452a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Analytics/Analysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Analytics/Analysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Analytics/TimeBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Analytics/TimeBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/Score.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/Score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Profile/ModalView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Profile/ModalView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/HomeStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/HomeStack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/MyProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyProfileScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/MyTestScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyTestScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/TestScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TestScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +57,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -65,7 +72,7 @@
       <workItem from="1593362343364" duration="4091000" />
       <workItem from="1593407508682" duration="7468000" />
       <workItem from="1593456947735" duration="4676000" />
-      <workItem from="1593488242399" duration="7307000" />
+      <workItem from="1593488242399" duration="18888000" />
     </task>
     <servers />
   </component>
