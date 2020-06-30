@@ -10,15 +10,9 @@ export default function LeaderboardScreen({navigation}) {
         return b.points - a.points;
     });
     return (
-        <LinearGradient style={styles.fullbox} colors={['#082e38', '#118cad']}>
 
-             <View style={styles.subHeader}>
-                <TouchableOpacity>
-                    <Text style={styles.contentText}>All time</Text>
-                </TouchableOpacity>
-            
-            </View>
- 
+        <LinearGradient style={styles.fullbox} colors={['#0E2C3D', '#14ccff']}>
+
             <View style={styles.BoxTop}>
                 <TopLeaderBoard top={2} user={User[1]}/>
                 <TopLeaderBoard top={1} user={User[0]}/>

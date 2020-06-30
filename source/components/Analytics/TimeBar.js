@@ -6,19 +6,19 @@ export default function TimeBar(){
         <View style={{
             height: 16,
 
-        }}> 
+        }}>
             <View style={{
                 height: 8,
-                borderBottomColor: '#999', 
+                borderBottomColor: '#d3d3d3',
                 borderBottomWidth: 1,
             }}>
             </View>
             <View style={{height: 8, width: 8, borderRadius: 8, backgroundColor: '#F47C53', marginTop: -4}}>
-            </View> 
+            </View>
             <View style={{
                 width: 32,
-                borderLeftColor: '#999',
-                borderRightColor: '#999',
+                borderLeftColor: '#d3d3d3',
+                borderRightColor: '#d3d3d3',
                 borderRightWidth: 1,
                 borderLeftWidth: 1,
                 height: 16,

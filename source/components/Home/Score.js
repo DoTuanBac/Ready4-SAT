@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     contatiner: {
         height: 150,
         backgroundColor: '#05B5CC',
+        //backgroundColor: '#0E2C3D'
     },
     scoreContainer: {
         justifyContent: 'center',

@@ -4,9 +4,7 @@ import { AntDesign } from '@expo/vector-icons'
 
 export default function Avatar(props){
     return(
-        <TouchableOpacity
-            onPress={() => {props.navigation.navigate('MyProfile')}}
-        >
+        <TouchableOpacity onPress={() => {props.navigation.navigate('MyProfile')}}>
             <View style={[styles.userIcon, props.home && styles.home, {borderColor: props.color}]}>
                 <AntDesign name='user' size={24} color={props.color}/>
             </View>

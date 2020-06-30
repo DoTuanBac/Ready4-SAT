@@ -1,10 +1,8 @@
 import React from "react";
-import {View, Text, StyleSheet, Modal, Platform, TouchableHighlight} from "react-native";
+import {View, Text, StyleSheet, Dimensions, Platform, TouchableHighlight} from "react-native";
 import {AntDesign, Entypo, SimpleLineIcons} from "@expo/vector-icons";
 import TouchableOpacity from "react-native-web/dist/exports/TouchableOpacity";
 import DateTimePicker from "@react-native-community/datetimepicker";
-
-//const windowWidth = Dimensions.get('window').width;
 
 export default function MyTestScreen(props) {
     const [date, setDate] = React.useState(new Date(1598051730000));
@@ -51,20 +49,19 @@ export default function MyTestScreen(props) {
                     <Text style={{color: '#050430'}}>1390</Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.score} onPress={() => setVisible(!visible)}>
+            <TouchableOpacity style={styles.score} onPress={() => setVisible(true)}>
                 <AntDesign name="flag" size={20} color="#050430" />
                 <Text style={{color: 'gray', marginLeft: 10, height: 26, marginTop: 10,}}>Final Score</Text>
             </TouchableOpacity>
-            <Modal
-                animationType="slide"
-                transparent={true}
-                visible={visible}
-            >
+
+
+            {/*{ visible &&
+            <View style={{height: Dimensions.get('window').height, width: Dimensions.get('window').width, position: "absolute", backgroundColor: 'black', opacity: 0.5}}>
                 <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
                     <View style={{height: 50, width: 50,}} >
                         <Text>Modal</Text>
                         <TouchableHighlight
-                            style={{backgroundColor: "#2196F3" }}
+                            style={{backgroundColor: "white" }}
                             onPress={() => {
                                 setVisible(false);
                             }}
@@ -73,7 +70,8 @@ export default function MyTestScreen(props) {
                         </TouchableHighlight>
                     </View>
                 </View>
-            </Modal>
+            </View>
+            }*/}
         </View>
     );
 }

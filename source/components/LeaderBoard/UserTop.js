@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text,StyleSheet } from 'react-native'
 import Avatar from './Avatar'
 
+
 export default function UserTop(props){
     return(
         <View style={styles.row}>

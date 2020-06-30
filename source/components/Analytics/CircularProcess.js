@@ -34,11 +34,11 @@ const renderThirdLayer = (percent, commonStyles, ringColorStyle, ringBgColorStyl
     * before passing to the rotateByStyle function
     **/
 
-    return <View style={[styles.secondProgressLayer,rotateByStyle((percent - 50), rotation, clockwise),
-       commonStyles, ringColorStyle, {borderWidth: progressRingWidth} ]}></View>
+    return <View style={[styles.secondProgressLayer, rotateByStyle((percent - 50), rotation, clockwise),
+  commonStyles, ringColorStyle, {borderWidth: progressRingWidth}]}/>
   }else{
     return <View style={[styles.offsetLayer, innerRingStyle, ringBgColorStyle,
-       {transform:[{rotateZ: `${offsetLayerRotation}deg`}], borderWidth: bgRingWidth}]}></View>
+  {transform: [{rotateZ: `${offsetLayerRotation}deg`}], borderWidth: bgRingWidth}]}/>
   }
 }
 
@@ -114,7 +114,7 @@ export default function CircularProgress({percent, radius, bgRingWidth, progress
       </View>
       {
         displayThickOffsetLayer && <View style={[styles.offsetLayer, commonStyles, thickOffsetRingStyle,
-           {transform:[{rotateZ: `${offsetLayerRotation}deg`}], borderWidth: progressRingWidth}]}></View>
+  {transform: [{rotateZ: `${offsetLayerRotation}deg`}], borderWidth: progressRingWidth}]}/>
       }
       {
         renderThirdLayer(percent, commonStyles, ringColorStyle, ringBgColorStyle, clockwise,
