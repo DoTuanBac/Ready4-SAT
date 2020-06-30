@@ -1,29 +1,22 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput, Image,TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TextInput, Image, TouchableOpacity, Platform} from 'react-native'
 import {LinearGradient} from "expo-linear-gradient";
 import { AntDesign } from '@expo/vector-icons';
 import {Profile} from "../data/profile";
-
-
-
-
-
+import DateTimePicker from "@react-native-community/datetimepicker";
 
 export default function MyProfileScreen(props){
     const [value, onChangeText] = React.useState('Mai V');
     const [user] = React.useState(Profile);
     const [score, setScore] = React.useState(1390);
-    const [date, setDate] = React.useState('Jul 14, 2020s');
+    const [date, setDate] = React.useState(new Date());
+    const [show, setShow] = React.useState(false);
 
-    let index = 0;
-    const data = [
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-    ]
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow(Platform.OS === 'ios');
+        setDate(currentDate);
+    };
 
     const handleGoToMyTest = React.useCallback(()=> {
         props.navigation.navigate('MyTest');
@@ -46,13 +39,13 @@ export default function MyProfileScreen(props){
                     <Text style={{color: '#e5e5e5'}}>Type Display Name</Text>
                 </View>
                 <TextInput
-                  
+
                   style={styles.name}
                   onChangeText={text => onChangeText(text)}
                   value={value}
               />
             </View>
-           
+
             <View style={styles.profileDetail}>
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>Email</Text>
@@ -66,9 +59,18 @@ export default function MyProfileScreen(props){
                     <Text style={styles.label}>My Tests</Text>
                     <Text style={styles.value}>{user.myTest}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.detail}>
+                <TouchableOpacity style={styles.detail} onPress={()=> setShow(!show)}>
                     <Text style={styles.label}>Test Date</Text>
-                    <Text style={styles.value}>{date}</Text>
+                    <Text style={styles.value}>{date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()}</Text>
+
+                    {show && (
+                        <DateTimePicker
+                            value={date}
+                            mode="date"
+                            display="default"
+                            onChange={onChange}
+                        />
+                    )}
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>Desired Score</Text>
@@ -124,7 +126,7 @@ export const styles = StyleSheet.create({
         color: 'white',
         textAlign: 'center',
         fontSize:20,
-       
+
     },
     detail: {
 

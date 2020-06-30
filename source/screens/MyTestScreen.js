@@ -1,11 +1,10 @@
 import React from "react";
-import {View, Text, StyleSheet, Dimensions, Platform, TouchableHighlight} from "react-native";
+import {View, Text, StyleSheet, Platform, TouchableOpacity} from "react-native";
 import {AntDesign, Entypo, SimpleLineIcons} from "@expo/vector-icons";
-import TouchableOpacity from "react-native-web/dist/exports/TouchableOpacity";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
 export default function MyTestScreen(props) {
-    const [date, setDate] = React.useState(new Date(1598051730000));
+    const [date, setDate] = React.useState(new Date());
     const [show, setShow] = React.useState(false);
     const [visible, setVisible] = React.useState(false);
 
@@ -21,7 +20,7 @@ export default function MyTestScreen(props) {
                 <Text style={styles.title}>Official Test</Text>
                 <AntDesign name="infocirlceo" size={15} color="#14ccff" />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.detail}>
+            <TouchableOpacity style={styles.detail} onPress={()=> setShow(!show)}>
                 <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end"}}>
                     <Text style={{color: '#069bcc', fontSize: 20}}>SAT</Text>
                     <Entypo name="calendar" size={20} color="#069bcc" />
@@ -30,10 +29,10 @@ export default function MyTestScreen(props) {
                     <AntDesign name="calendar" size={20} color="#050430" />
                     <View style={{flexDirection: "column", marginLeft: 10,}}>
                         <Text style={{color: 'gray', fontSize: 10, marginBottom: 3,}}>Target Date</Text>
-                        <Text style={{color: '#050430'}}>date</Text>
+                        <Text style={{color: '#050430'}}>{date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()}</Text>
                     </View>
                 </View>
-                {!show && (
+                {show && (
                     <DateTimePicker
                         value={date}
                         mode="date"
@@ -78,7 +77,6 @@ export default function MyTestScreen(props) {
 
 export const styles = StyleSheet.create({
     header: {
-        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingLeft: 10,
