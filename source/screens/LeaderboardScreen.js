@@ -1,5 +1,5 @@
 import React from 'react'
-import {FlatList, ScrollView, StyleSheet, View} from 'react-native'
+import {FlatList, ScrollView, StyleSheet, View,Text,TouchableOpacity} from 'react-native'
 import TopLeaderBoard from '../components/LeaderBoard/TopLeaderBoard'
 import {LinearGradient} from 'expo-linear-gradient';
 import {User} from '../data/user'
@@ -10,7 +10,9 @@ export default function LeaderboardScreen({navigation}) {
         return b.points - a.points;
     });
     return (
+
         <LinearGradient style={styles.fullbox} colors={['#0E2C3D', '#14ccff']}>
+
             <View style={styles.BoxTop}>
                 <TopLeaderBoard top={2} user={User[1]}/>
                 <TopLeaderBoard top={1} user={User[0]}/>
@@ -51,10 +53,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         width: '90%',
-        marginTop: 5,
+        marginTop: 10,
         borderColor: 'white',
         borderWidth: 1,
         borderRadius: 8,
+
     },
     contentText: {
         color: 'white',

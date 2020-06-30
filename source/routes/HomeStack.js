@@ -73,6 +73,7 @@ export default function HomeStack(props) {
             headerTintColor: 'white',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
         }}
+
       />
       <Stack.Screen
         name="Analytics"
@@ -98,18 +99,22 @@ export default function HomeStack(props) {
         name="Test"
         component={TestScreen}
         options={{
+
             headerStyle: {backgroundColor: '#0a566b'},
             headerTintColor: 'white',
             title: '',
             headerTitleStyle: {color: 'white', marginLeft: -28,}
         }}
+
       />
       <Stack.Screen
         name="Question"
         component={TestDetailScreen}
         options={{
+
           headerStyle: {backgroundColor: '#0a566b'},
           headerTintColor: 'white',
+
           title: '',
           headerTitleStyle: {color: 'white', marginLeft: -28,},
             headerRight: () =>
@@ -126,10 +131,12 @@ export default function HomeStack(props) {
         name="Vocab"
         component={VocabScreen}
          options={{
+
               headerStyle: {backgroundColor: '#0a566b'},
               headerTintColor: 'white',
               title: 'Vocabulary',
               headerTitleStyle: {color: 'white', marginLeft: -28,},
+
           headerRight: () =>
           <TouchableOpacity   onPress={() =>props.navigation.navigate('VocabHelp')}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -203,7 +210,9 @@ export default function HomeStack(props) {
         name="Learn"
         component={VocabDetailScreen}
         options={{
+
           headerStyle: {backgroundColor: '#0a566b'},
+
           title: '',
           headerLeft: () =>
             <TouchableOpacity
@@ -268,7 +277,7 @@ export default function HomeStack(props) {
         name="Login"
         component={LoginScreen}
         options={{
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#082e38'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity
@@ -284,7 +293,7 @@ export default function HomeStack(props) {
         name="Forgot"
         component={ForgotScreen}
         options={{
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#082e38'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity
@@ -300,7 +309,7 @@ export default function HomeStack(props) {
         name="Register"
         component={RegisterScreen}
         options={{
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#082e38'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity
@@ -316,7 +325,7 @@ export default function HomeStack(props) {
         name="RegisterDetail"
         component={RegisterDetailScreen}
         options={{
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#082e38'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity

@@ -26,7 +26,9 @@ export default function MyProfileScreen(props){
     },[]);
 
     return(
+
         <LinearGradient style={styles.container} colors={['#0E2C3D', '#14ccff']}>
+
             <View style={styles.profile}>
                 <View>
                     <View style={styles.perContainer}>
