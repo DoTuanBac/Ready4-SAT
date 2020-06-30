@@ -19,4 +19,3 @@
 - NodeJS: 14.4.0
 - khi cài đặt 1 gói npm thì nhớ thêm: --save 
 - mỗi lần pull code về chỉ cần : npm install
-
