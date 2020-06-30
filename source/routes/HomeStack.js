@@ -258,7 +258,7 @@ export default function HomeStack(props) {
         name="VocabList"
         component={VocabListScreen}
         options={{
-          headerStyle: {backgroundColor: '#0084ad'},
+          headerStyle: {backgroundColor: '#082e38'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity

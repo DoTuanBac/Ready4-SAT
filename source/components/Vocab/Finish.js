@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Finish(props){
     return(
-        <LinearGradient style={styles.fullbox}  colors={[ '#082e38','#118cad']}>
+        <LinearGradient style={styles.fullbox}  colors={[ '#0a566b','#118cad']}>
 
         <Text style={styles.score}>{props.score}/{props.sum}</Text>
            <TouchableOpacity style={styles.finishButton} onPress={() => props.navigation.navigate(props.route)}>
