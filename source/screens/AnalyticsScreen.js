@@ -14,6 +14,7 @@ export default function AnalyticsScreen({navigation}){
                 rnw='450'
             />
             <Analysis
+                navigation={navigation}
                 name={'Writing'}
                 mastery={450}
                 progress={'50%'}
@@ -25,6 +26,7 @@ export default function AnalyticsScreen({navigation}){
                 />
             </Analysis>
             <Analysis
+                navigation={navigation}
                 name={'Reading'}
                 mastery={680}
                 progress={'30%'}
@@ -37,6 +39,7 @@ export default function AnalyticsScreen({navigation}){
                 />
             </Analysis>
             <Analysis
+                navigation={navigation}
                 name={'Math-Calculator'}
                 mastery={930}
                 progress={'67%'}
@@ -48,6 +51,7 @@ export default function AnalyticsScreen({navigation}){
                 />
             </Analysis>
             <Analysis
+                navigation={navigation}
                 name={'Math-No Calculator'}
                 mastery={870}
                 progress={'50%'}

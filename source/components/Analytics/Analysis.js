@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet} from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import ProgressBar from '../Home/ProgressBar'
 import AnalyticsCircularProgcess from './AnalyticsCircularProgcess'
 import TimeBar from './TimeBar'
@@ -7,7 +7,10 @@ import { AntDesign } from '@expo/vector-icons'
 
 export default function Analysis(props){
     return(
-        <View style={styles.container}>
+        <TouchableOpacity 
+            style={styles.container}
+            onPress={() => {props.navigation.navigate('Practice')}}
+        >
             <View style={[styles.titleContainer, styles.row]}>
                 {
                     props.children
@@ -48,7 +51,7 @@ export default function Analysis(props){
                     style={{flex: 1, alignSelf: 'center'}}
                 />
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
