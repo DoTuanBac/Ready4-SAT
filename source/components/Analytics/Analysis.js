@@ -7,7 +7,10 @@ import { AntDesign } from '@expo/vector-icons'
 
 export default function Analysis(props){
     return(
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity
+            style={styles.container}
+            onPress={() => {props.navigation.navigate('Practice')}}
+        >
             <View style={[styles.titleContainer, styles.row]}>
                 {
                     props.children
