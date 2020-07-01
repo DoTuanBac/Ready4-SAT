@@ -23,7 +23,7 @@ export default function MyProfileScreen(props){
 
     return(
 
-        <LinearGradient style={styles.container} colors={['#0E2C3D', '#14ccff']}>
+        <LinearGradient style={styles.container} colors={['#041c38', '#118791']}>
 
             <View style={styles.profile}>
                 <View>
@@ -35,7 +35,7 @@ export default function MyProfileScreen(props){
                     </View>
                 </View>
                 <View style={{margin: 6}}>
-                    <Text style={{color: '#e5e5e5'}}>Type Display Name</Text>
+                    <Text style={{color: '#adb2b8', paddingTop: 15, fontSize: 13.5}}>Type Display Name</Text>
                 </View>
                 <TextInput
 
@@ -94,15 +94,16 @@ export const styles = StyleSheet.create({
     profile: {
         margin: 5,
         alignItems: 'center',
-        marginBottom: 30,
+        marginBottom: 20,
     },
     profileDetail: {
     },
     perContainer: {
         margin: 10,
+        marginBottom: 15,
     },
     percent: {
-        color: '#fff',
+        color: '#adb2b8',
         alignContent: 'center',
         paddingLeft: 26.5,
     },
@@ -124,11 +125,14 @@ export const styles = StyleSheet.create({
         borderBottomColor: 'gray',
         color: 'white',
         textAlign: 'center',
-        fontSize:18,
+        fontSize:16,
     },
     detail: {
         flexDirection: 'row',
-        padding: 15,
+        paddingTop: 17.5,
+        paddingRight: 15,
+        paddingLeft: 15,
+        paddingBottom: 17.5,
         justifyContent: 'space-between',
         alignItems: 'center',
         borderBottomColor: '#d3d3d3',
@@ -136,16 +140,16 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     label: {
-        color: '#0ac8fc',
+        color: '#29d5e3',
     },
     value: {
-        color: '#0ac8fc',
-        fontSize: 14,
+        color: '#29d5e3',
     },
     schoolIcon: {
-        height: 30,
-        width: 30,
+        height: 32,
+        width: 32,
         borderRadius: 100,
-        //marginBottom: 5,
+        marginTop: -20,
+        marginBottom: -20,
     }
 });

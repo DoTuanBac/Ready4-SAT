@@ -11,8 +11,7 @@ export default function LeaderboardScreen({navigation}) {
     });
     return (
 
-        <LinearGradient style={styles.fullbox} colors={['#0E2C3D', '#14ccff']}>
-
+        <LinearGradient style={styles.fullbox} colors={['#041c38', '#118791']}>
             <View style={styles.BoxTop}>
                 <TopLeaderBoard top={2} user={User[1]}/>
                 <TopLeaderBoard top={1} user={User[0]}/>

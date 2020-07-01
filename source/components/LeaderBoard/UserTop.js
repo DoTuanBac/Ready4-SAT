@@ -7,16 +7,17 @@ export default function UserTop(props){
     return(
         <View style={styles.row}>
             <View style={styles.rowID}>
-                <Text style={{fontSize: 14,color:"white"} } >{props.index+1}</Text>
+                <Text style={{color:"#aaaaad"} } >{props.index+1}</Text>
             </View>
-            <View style={styles.rowprofile} >
+            <View style={styles.rowprofile}>
                 <View style={styles.rowProfilecontent}>
-                    <Avatar size={40}  uri={props.user.avatar} />
-                    <Text style={{fontSize: 14,color:"white",paddingHorizontal:5,}} >{props.user.name}</Text>
+                    <Avatar size={50}  uri={props.user.avatar} />
+                    <Text style={{fontSize: 14,color:"white",paddingHorizontal:8,}} >{props.user.name}</Text>
                 </View>
-            </View>
-            <View style={styles.rowpoint} >
-                <Text style={{fontSize: 18,color:"white"} } >{props.user.points}</Text>
+                <View style={styles.rowpoint} >
+                    <Text style={{color:"white"} } >{props.user.points}</Text>
+                    <Text style={{fontSize: 12, color: '#aaaaad'}}>Points</Text>
+                </View>
             </View>
       </View>
     )
@@ -25,31 +26,33 @@ const styles = StyleSheet.create({
     row: {
         flex: 1,
          flexDirection: 'row',
-         borderTopColor:'white',
+         borderTopColor:'#aaaaad',
          borderWidth:0,
-         borderTopWidth:1,
+         borderTopWidth: 0.5,
+        marginLeft: 50,
+        marginRight: 50,
+        paddingTop: 5,
+        paddingBottom: 5,
     },
     rowID: {
-         width: '10%',
          height: 50,
          alignItems: 'center',
          justifyContent: 'center',
+        marginRight: 10,
     },
     rowpoint: {
-        width: '20%',
-        height: 50,
+        height: 55,
         alignItems: 'center',
         justifyContent: 'center',
     },
     rowprofile: {
-        width: '70%',
-        height: 50,
-
+        flex: 1,
+        paddingLeft: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     rowProfilecontent: {
-        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-
     },
 })

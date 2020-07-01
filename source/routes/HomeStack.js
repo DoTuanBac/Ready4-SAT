@@ -69,11 +69,14 @@ export default function HomeStack(props) {
         name="Leaderboard"
         component={LeaderboardScreen}
         options={{
-            headerStyle: {backgroundColor: '#0E2C3D'},
+            headerStyle: {backgroundColor: '#042538'},
             headerTintColor: 'white',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
+            headerRight: () =>
+                <TouchableOpacity style={{marginRight: 16}}>
+                    <AntDesign name='question' size={24} color={'white'}/>
+                </TouchableOpacity>,
         }}
-
       />
       <Stack.Screen
         name="Analytics"
@@ -148,7 +151,7 @@ export default function HomeStack(props) {
         name="MyProfile"
         component={MyProfileScreen}
         options={{
-            headerStyle: {backgroundColor: '#0E2C3D'},
+            headerStyle: {backgroundColor: '#042538'},
             headerTintColor: 'white',
             title: 'My Profile',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
