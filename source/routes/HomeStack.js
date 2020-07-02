@@ -9,6 +9,7 @@ import SchoolsScreen from '../screens/SchoolsScreen'
 import TestScreen from '../screens/TestScreen'
 import VocabScreen from '../screens/VocabScreen'
 import PracticeScreen from '../screens/PracticeScreen'
+import CalculatorScreen from '../screens/CalculatorScreen'
 import VocabDetailScreen from '../screens/VocabDetailScreen'
 import VocabHelpScreen from '../screens/VocalHelpScreen'
 import TestDetailScreen from '../screens/TestDetailScreen'
@@ -206,8 +207,14 @@ export default function HomeStack(props) {
       <Stack.Screen
         name="Practice"
         component={PracticeScreen}
+        options={{
+          headerStyle: {backgroundColor: '#0E2C3D'}
+        }}
       />
-
+      <Stack.Screen
+        name="Calculator"
+        component={CalculatorScreen}
+      />
       <Stack.Screen
         name="Learn"
         component={VocabDetailScreen}
