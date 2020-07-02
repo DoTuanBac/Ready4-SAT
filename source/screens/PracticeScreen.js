@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     bottom: {
         position: 'absolute',
         bottom:0,
-        backgroundColor:'#white',
+        backgroundColor:'white',
         width:'100%',
         borderBottomEndRadius: 4,
         padding:10,
