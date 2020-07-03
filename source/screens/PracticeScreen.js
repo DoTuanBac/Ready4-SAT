@@ -16,7 +16,7 @@ export default function TestDetailScreen({navigation}){
     const [questions, setQuestion] = useState(initQuestions.map(element =>
         ({...element, answer: ''}) 
     ))
-    const [index, setIndex] = useState(1)
+    const [indexQuestion, setIndexQuestion] = useState(1)
 
     // HEADER CLOCK COUNT DOWN
     useLayoutEffect(() => {
@@ -34,24 +34,22 @@ export default function TestDetailScreen({navigation}){
             ),
         });
     }, [navigation])
-    console.log(questions)
-    console.log(index)
 
     return(
         <View style={styles.container}>
             <ProcessBar 
                 questions = {questions}
                 setQuestion = {setQuestion}
-                setIndex = {setIndex}
-                index = {index}
+                setIndexQuestion = {setIndexQuestion}
+                indexQuestion = {indexQuestion}
             />
             <ScrollView>
             <View>
                 <View style={styles.questionContainer}>
-                    <Text>{questions[index -1].title}</Text>
+                    <Text>{questions[indexQuestion -1].title}</Text>
                 </View>
                 <FlatList 
-                    data = {questions[index - 1].options}
+                    data = {questions[indexQuestion - 1].options}
                     renderItem = {({item, index}) => (
                         <View style={styles.row}>
                             <View style={styles.answer}>
@@ -59,11 +57,11 @@ export default function TestDetailScreen({navigation}){
                             </View>
                             <View style={styles.answerForm}>
                                 <TouchableOpacity
-                                    onPress = {() => setQuestion(questions.map((element) => 
-                                        element.id === (index) ?
-                                        {...element, answer: item} :
-                                        element
-                                    ))}
+                                    onPress = {() => {setQuestion(questions.map((element) => (
+                                        element.id === indexQuestion - 1 ?
+                                        {...element} :
+                                        {...element, answer: questions[indexQuestion - 1].options[index]}
+                                    )))}}
                                 >
                                     <Text>{item}</Text>
                                 </TouchableOpacity>
@@ -76,9 +74,9 @@ export default function TestDetailScreen({navigation}){
             {/* BOTTOM CONTROLLER */}
             <View style={styles.bottom}>
                 <TouchableOpacity onPress={() => {
-                    setIndex(index - 1)
+                    setIndexQuestion(indexQuestion - 1)
                     setQuestion(questions.map(element => 
-                        element.id === index ? 
+                        element.id === indexQuestion ? 
                         {...element, isIndex: true} :
                         {...element, isIndex: false}
                     ))
@@ -95,9 +93,9 @@ export default function TestDetailScreen({navigation}){
                     <AntDesign name="calculator" size={20} color="white" />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {
-                    setIndex(index + 1)
+                    setIndexQuestion(indexQuestion + 1)
                     setQuestion(questions.map(element => 
-                        element.id === index ? 
+                        element.id === indexQuestion ? 
                         {...element, isIndex: true} :
                         {...element, isIndex: false}
                     ))
