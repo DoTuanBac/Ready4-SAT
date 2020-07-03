@@ -9,11 +9,13 @@ export default function ResultScreen({navigation}){
                 <TouchableOpacity
                     onPress={() => {navigation.navigate('Home')}}
                 >
-                    <Text style={{color: 'white'}}>Quit</Text>
+                    <Text style={{color: 'white', paddingLeft: 20, fontSize: 16}}>Quit</Text>
                 </TouchableOpacity>
             ),
             headerRight: () => (
-                <Text style={{color: 'white'}}>4200</Text>
+                <View style={styles.headerBox}>
+                    <Text style={{color: 'white'}}>4200</Text>
+                </View>
             ),
         });
     }, [navigation])
@@ -23,32 +25,40 @@ export default function ResultScreen({navigation}){
             <View style={[styles.got, styles.column]}>
                 <Text style={{color: 'white', fontSize: 20}}>You've got</Text>
                 <Text style={{color: '#F1D513', fontSize: 50}}>4/5</Text>
-                <Text style={{color: 'white', fontSize: 15}}>Correct Questions</Text>
-                <Text style={{color: 'white', fontSize: 15}}>(0 skipped)</Text>
+                <Text style={{color: 'white', fontSize: 12}}>Correct Questions</Text>
+                <Text style={{color: 'white', fontSize: 12}}>(0 skipped)</Text>
             </View>
             <View style={[styles.did, styles.column]}>
-                <Text>Here's how you did</Text>
-                <View style={styles.row}>
-                    <View>
+                <Text style={{color: 'white', fontSize: 16, paddingVertical: 10}}>Here's how you did</Text>
+                <View style={[styles.row, {height: '100%', width: '100%'}]}>
+                    <View style={[styles.column,{width: '50%'}]}>
                         <AnalyticsCircularProgcess 
                             percent={'60%'} 
                             color={'#05B5CC'} 
                             bgColor={'#0E2C3D'} 
                             point={230}
                         />
-                        <Text>Mastery Level</Text>
+                        <Text style={{color: 'white'}}>Mastery Level</Text>
                     </View>
-                    <View>
-                        <Text>Your Pace</Text>
+                    <View style={{justifyContent: 'center', alignItems: 'center', height: '100%', width: '50%'}}>
+                        <Text style={{color: 'white'}}>Your Pace</Text>
                     </View>
                 </View>
             </View>
             <View style={[styles.decision, styles.column]}>
-                <Text>Review Answers</Text>
-                <Text>Next Topic</Text>
+                <TouchableOpacity>
+                    <View>
+                        <Text style={{color: 'white'}}>Review Answers</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <View>
+                        <Text style={{color: 'white'}}>Next Topic</Text>
+                    </View>
+                </TouchableOpacity>
                 <View style={styles.row}>
-                    <Text>Redo Set</Text>
-                    <Text>Next Set</Text>
+                    <Text style={{color: 'white'}}>Redo Set</Text>
+                    <Text style={{color: 'white'}}>Next Set</Text>
                 </View>
             </View>
         </View>
@@ -81,5 +91,13 @@ const styles = StyleSheet.create({
     },
     decision: {
         flex: 1,
+    },
+    headerBox: {
+        borderColor: 'white', 
+        borderRadius: 2, 
+        borderWidth: 1, 
+        paddingHorizontal: 8,
+        margin: 20, 
+        paddingVertical: 4
     }
 })
