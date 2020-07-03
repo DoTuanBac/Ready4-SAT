@@ -9,15 +9,19 @@ export default function CountDown(props){
         let time = timer 
         let minutes = Math.floor(time / 60)
         let seconds = Math.floor(time % 60)
+
+        minutes = minutes < 10 ? "0" + minutes : minutes
+        seconds = seconds < 10 ? "0" + seconds : seconds
+        
         return minutes + ':' + seconds
     }
 
     useEffect(() => {
-        setInterval(() => {
+        setTimeout(() => {
             setCountDown(displayTimer())
             setTimer(timer - 1)
         }, 1000)
-    }, [timer, countDown])
+    }, [timer])
 
     return(
         <Text style={{textAlign: 'center', color: 'white', fontSize: 20}}>
