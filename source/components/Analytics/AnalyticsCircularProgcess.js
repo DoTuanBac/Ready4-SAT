@@ -10,7 +10,7 @@ export default function AnalyticsCircularProgcess(props){
                 radius={32}
                 bgRingWidth={6}
                 progressRingWidth={6}
-                ringBgColor='white'
+                ringBgColor={props.bgColor || 'white'}
                 ringColor={props.color}
             >
                 <CircularProgress

@@ -22,9 +22,11 @@ export default function TestDetailScreen({navigation}){
     useLayoutEffect(() => {
         navigation.setOptions({
             headerLeft: () => (
-                <Text style={{color: 'white', paddingLeft: 10}}>
-                    End
-                </Text>
+                <TouchableOpacity
+                    onPress={() => {navigation.navigate('Result')}}
+                >
+                    <Text style={{color: 'white', paddingLeft: 10, fontSize: 20}}>End</Text>
+                </TouchableOpacity>
             ),
             headerTitle: () => (
                 <CountDown duration={300}/>
@@ -73,16 +75,23 @@ export default function TestDetailScreen({navigation}){
             </ScrollView>
             {/* BOTTOM CONTROLLER */}
             <View style={styles.bottom}>
-                <TouchableOpacity onPress={() => {
-                    setIndexQuestion(indexQuestion - 1)
-                    setQuestion(questions.map(element => 
-                        element.id === indexQuestion ? 
-                        {...element, isIndex: true} :
-                        {...element, isIndex: false}
-                    ))
-                }}>
-                    <AntDesign name="left" size={20} color="white" />
-                </TouchableOpacity>
+                {
+                    (indexQuestion !== 1) ?
+                    <TouchableOpacity onPress={() => {
+                        setIndexQuestion(indexQuestion - 1)
+                        setQuestion(questions.map(element => 
+                            element.id === indexQuestion ? 
+                            {...element, isIndex: true} :
+                            {...element, isIndex: false}
+                        ))
+                    }}>
+                        <AntDesign name="left" size={20} color="white" />
+                    </TouchableOpacity> : 
+                    <TouchableOpacity>
+                        <AntDesign name="left" size={20} color='transparent' />
+                    </TouchableOpacity>
+                }
+                
                 <TouchableOpacity onPress={() => {}}>
                     <AntDesign name="bulb1" size={20} color="white" />
                 </TouchableOpacity>
@@ -92,16 +101,25 @@ export default function TestDetailScreen({navigation}){
                 <TouchableOpacity onPress={() => {navigation.navigate('Calculator')}}>
                     <AntDesign name="calculator" size={20} color="white" />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => {
-                    setIndexQuestion(indexQuestion + 1)
-                    setQuestion(questions.map(element => 
-                        element.id === indexQuestion ? 
-                        {...element, isIndex: true} :
-                        {...element, isIndex: false}
-                    ))
-                }}>
-                    <AntDesign name="right" size={20} color="white" />
-                </TouchableOpacity>
+
+                {
+                    !(indexQuestion === questions.length) ?
+                    <TouchableOpacity onPress={() => {
+                        setIndexQuestion(indexQuestion + 1)
+                        setQuestion(questions.map(element => 
+                            element.id === indexQuestion ? 
+                            {...element, isIndex: true} :
+                            {...element, isIndex: false}
+                        ))
+                    }}>
+                        <AntDesign name="right" size={20} color="white" />
+                    </TouchableOpacity> :
+                    <TouchableOpacity
+                        onPress={() => {navigation.navigate('Result')}}
+                    >
+                        <AntDesign name='check' size={20} color='white' />
+                    </TouchableOpacity>
+                }
             </View>
         </View>
     )
