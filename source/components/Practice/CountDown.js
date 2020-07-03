@@ -24,7 +24,7 @@ export default function CountDown(props){
     }, [timer])
 
     return(
-        <Text style={{textAlign: 'center', color: 'white', fontSize: 20}}>
+        <Text style={{textAlign: 'center', color: 'white', fontSize: 16}}>
             {countDown}
         </Text>
     )
