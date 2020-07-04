@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import {TouchableOpacity, View, Text, Modal} from 'react-native';
 import { Feather, SimpleLineIcons, FontAwesome, Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
@@ -146,14 +146,12 @@ export default function HomeStack(props) {
 
           headerStyle: {backgroundColor: '#0E2C3D'},
           headerTintColor: 'white',
-
           title: '',
           headerTitleStyle: {color: 'white', marginLeft: -28,},
             headerRight: () =>
             <TouchableOpacity   onPress={() =>props.navigation.navigate('VocabHelp')}>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
-
-              <Text   style={{marginRight: 16,color:"white",fontSize:16,}}>00:00</Text>
+                  <Entypo  style={{marginRight: 16}} name="info" size={16} color="white" />
               </View>
               </TouchableOpacity>
 

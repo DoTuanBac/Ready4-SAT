@@ -1,8 +1,9 @@
-import React,{ useState } from 'react'
+import React, {useLayoutEffect, useState} from 'react'
 import { View, Text,StyleSheet,TouchableOpacity } from 'react-native'
 import TestDetail from '../components/Test/TestDetail'
 import Finish from '../components/Vocab/Finish'
-import { AntDesign } from '@expo/vector-icons';
+import {AntDesign, Feather} from '@expo/vector-icons';
+import CountDown from "../components/Practice/CountDown";
 
 export default function TestDetailScreen({route,navigation}){
     const [count, setCount] = useState(0);
@@ -30,7 +31,7 @@ export default function TestDetailScreen({route,navigation}){
                     />
 
                     <View style={styles.bottom}>
-                       <TouchableOpacity onPress={() => {setCount(count-1), setCheck(false)}}>
+                       <TouchableOpacity onPress={() => {setCount(count-1) && setCheck(false)}}>
                           <AntDesign name="leftcircleo" size={24} color="white" />
                        </TouchableOpacity>
                        <TouchableOpacity onPress={() => checkcheck()}>

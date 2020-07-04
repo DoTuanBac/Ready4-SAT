@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d0e0c25-6ee6-49e5-be4b-daa3ca56452a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/image.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Practice/ProcessBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Practice/ProcessBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Test/TestDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Test/TestDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Vocab/VocabCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Vocab/VocabCategories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/HomeStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/HomeStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/LeaderboardScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LeaderboardScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/PracticeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/PracticeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/TestDetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TestDetailScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/TestScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TestScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
