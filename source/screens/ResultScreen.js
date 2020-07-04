@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import AnalyticsCircularProgcess from '../components/Analytics/AnalyticsCircularProgcess'
+import { AntDesign } from '@expo/vector-icons';
 
 export default function ResultScreen({navigation}){
     useLayoutEffect(() => {
@@ -30,8 +31,8 @@ export default function ResultScreen({navigation}){
             </View>
             <View style={[styles.did, styles.column]}>
                 <Text style={{color: 'white', fontSize: 16, paddingVertical: 10}}>Here's how you did</Text>
-                <View style={[styles.row, {height: '100%', width: '100%'}]}>
-                    <View style={[styles.column,{width: '50%'}]}>
+                <View style={[styles.row, {width: '100%'}]}>
+                    <View style={[styles.column,{width: '50%', borderRightColor: 'white', borderRightWidth: 1}]}>
                         <AnalyticsCircularProgcess 
                             percent={'60%'} 
                             color={'#05B5CC'} 
@@ -41,24 +42,43 @@ export default function ResultScreen({navigation}){
                         <Text style={{color: 'white'}}>Mastery Level</Text>
                     </View>
                     <View style={{justifyContent: 'center', alignItems: 'center', height: '100%', width: '50%'}}>
+                        <Text style={{color: 'green', fontSize: 25}}>05:54 min</Text>
+                        <Text style={{color: 'white'}}>(On Peace)</Text>
                         <Text style={{color: 'white'}}>Your Pace</Text>
                     </View>
                 </View>
             </View>
-            <View style={[styles.decision, styles.column]}>
-                <TouchableOpacity>
-                    <View>
-                        <Text style={{color: 'white'}}>Review Answers</Text>
+            <View style={[styles.decision, styles.column, {height: '100%'}]}>
+                <TouchableOpacity
+                    onPress={() => navigation.goBack()}
+                    style={{width: '100%', justifyContent: 'center', alignItems: 'center'}}
+                >
+                    <View style={{width: '80%', borderRadius: 4, borderColor: 'white', borderWidth: 1, height: 40, justifyContent: 'center', margin: 5, backgroundColor: 'white'}}>
+                        <Text style={{color: '#0E2C3D', textAlign: 'center'}}>Review Answers</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <View>
-                        <Text style={{color: 'white'}}>Next Topic</Text>
+                <TouchableOpacity
+                    style={{width: '100%', justifyContent: 'center', alignItems: 'center'}}
+                >
+                    <View style={{width: '80%', borderRadius: 4, borderColor: 'white', borderWidth: 1, height: 40, justifyContent: 'center', margin: 5}}>
+                        <Text style={{color: 'white', textAlign: 'center'}}>Next Topic</Text>
                     </View>
                 </TouchableOpacity>
-                <View style={styles.row}>
-                    <Text style={{color: 'white'}}>Redo Set</Text>
-                    <Text style={{color: 'white'}}>Next Set</Text>
+                <View style={[styles.row, {justifyContent: 'space-between', width: '80%'}]}>
+                    <View style={styles.row}>
+                        <AntDesign 
+                            name='reload1' color='white' size={20}
+                            style={{paddingRight: 10}}
+                        />
+                        <Text style={{color: 'white'}}>Redo Set</Text>
+                    </View>
+                    <View style={styles.row}>
+                        <AntDesign 
+                            name='rightsquareo' color='white' size={20}
+                            style={{paddingRight: 10}}
+                        />
+                        <Text style={{color: 'white'}}>Next Set</Text>
+                    </View>
                 </View>
             </View>
         </View>
@@ -97,7 +117,7 @@ const styles = StyleSheet.create({
         borderRadius: 2, 
         borderWidth: 1, 
         paddingHorizontal: 8,
-        margin: 20, 
+        marginRight: 20, 
         paddingVertical: 4
     }
 })
