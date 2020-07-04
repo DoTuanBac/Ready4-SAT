@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6d0e0c25-6ee6-49e5-be4b-daa3ca56452a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LeaderBoard/Avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeaderBoard/Avatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LeaderBoard/TopLeaderBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeaderBoard/TopLeaderBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LeaderBoard/UserTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeaderBoard/UserTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Newsfeed/BookmarkItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsfeed/BookmarkItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Newsfeed/NewsFeedItemView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsfeed/NewsFeedItemView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/HomeStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/HomeStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/BookmarkedScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/BookmarkedScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/LeaderboardScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LeaderboardScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MyProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyProfileScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="maivu" />
-                    <option name="lastUsedInstant" value="1593373901" />
+                    <option name="lastUsedInstant" value="1593848528" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -57,6 +56,23 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -83,29 +99,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593420574336" />
-    <state width="1323" height="130" key="GridCell.Tab.0.bottom" timestamp="1593456943215">
+    <state width="1323" height="147" key="GridCell.Tab.0.bottom" timestamp="1593848756350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="130" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593456943215" />
-    <state width="1323" height="130" key="GridCell.Tab.0.center" timestamp="1593456943215">
+    <state width="1323" height="147" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593848756350" />
+    <state width="1323" height="147" key="GridCell.Tab.0.center" timestamp="1593848756350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="130" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593456943215" />
-    <state width="1323" height="130" key="GridCell.Tab.0.left" timestamp="1593456943214">
+    <state width="1323" height="147" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593848756350" />
+    <state width="1323" height="147" key="GridCell.Tab.0.left" timestamp="1593848756349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="130" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593456943214" />
-    <state width="1323" height="130" key="GridCell.Tab.0.right" timestamp="1593456943215">
+    <state width="1323" height="147" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593848756349" />
+    <state width="1323" height="147" key="GridCell.Tab.0.right" timestamp="1593848756350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="130" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593456943215" />
-    <state x="129" y="55" key="MergeDialog" timestamp="1593532078782">
+    <state width="1323" height="147" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593848756350" />
+    <state x="129" y="55" key="MergeDialog" timestamp="1593848732493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593532078782" />
-    <state x="563" y="230" key="MultipleFileMergeDialog" timestamp="1593532078788">
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593848732493" />
+    <state x="563" y="230" key="MultipleFileMergeDialog" timestamp="1593848732502">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="563" y="230" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593532078788" />
+    <state x="563" y="230" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1593848732502" />
   </component>
 </project>

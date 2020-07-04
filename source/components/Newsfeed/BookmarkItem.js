@@ -4,13 +4,15 @@ import Header from "./Header";
 
 export default function BookmarkItem(props) {
 
-    const { schoolName, date, title, navigation } = props;
+    const { schoolName, date, title, imageSource, content, navigation } = props;
 
     const handleGoToDetail = React.useCallback(() => {
         navigation.navigate('NewsFeedDetail', {
             schoolName,
+            imageSource,
             date,
             title,
+            content,
         });
     },[navigation]);
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
-import { TouchableOpacity, View,Text } from 'react-native';
-import { Feather, SimpleLineIcons, FontAwesome,Entypo,AntDesign } from '@expo/vector-icons'
+import {TouchableOpacity, View, Text, Modal} from 'react-native';
+import { Feather, SimpleLineIcons, FontAwesome, Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
 import LeaderboardScreen from '../screens/LeaderboardScreen'
 import AnalyticsScreen from '../screens/AnalyticsScreen'
@@ -29,6 +29,24 @@ import BookmarkedScreen from "../screens/BookmarkedScreen";
 const Stack = createStackNavigator();
 
 export default function HomeStack(props) {
+    const [visible, setVisible] = React. useState(false);
+
+    const modalOfficial = (
+        <TouchableOpacity
+            style={{backgroundColor:"#f9fafb", width:"80%", borderRadius:2, marginBottom: 50,}}
+            onPress={() => { setVisible(!visible) }}
+        >
+            <View style={{padding: 20,}}>
+                <Text style={{fontSize: 18, color: '#075769'}}>Official SAT- If you haven't yet signed up for the SAT, you can do so on the https://collegereadiness.collegeboard.org/sat website. Choose your date carefully, and make sure you have as much time as possible to study beforehand.</Text>
+            </View>
+            <View style={{alignItems: 'flex-end', padding: 10,}}>
+                <View style={{borderRadius:5, marginHorizontal:10, paddingVertical:10, paddingHorizontal:20,backgroundColor:"#f9fafb", marginRight: -5,}}>
+                    <Text style={{color: '#05B5CC'}}>GOT IT!</Text>
+                </View>
+            </View>
+        </TouchableOpacity>
+    );
+
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -75,8 +93,18 @@ export default function HomeStack(props) {
             headerTintColor: 'white',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
             headerRight: () =>
-                <TouchableOpacity style={{marginRight: 16}}>
+                <TouchableOpacity style={{marginRight: 16}} onPress={()=> setVisible(!visible)}>
                     <AntDesign name='question' size={24} color={'white'}/>
+                    <Modal
+                        transparent={true}
+                        visible={visible}
+                    >
+                        <View style={{backgroundColor:"#00000099", flex:1, alignItems: 'center', justifyContent: 'center',}}>
+                            <View>
+                                {modalOfficial}
+                            </View>
+                        </View>
+                    </Modal>
                 </TouchableOpacity>,
         }}
       />

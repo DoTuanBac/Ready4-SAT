@@ -32,6 +32,8 @@ export default function NewsFeedItemView(props) {
         }
     },[click]);
 
+    React.useEffect((bookmark)=>{},[]);
+
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={handleGoToDetail}>
