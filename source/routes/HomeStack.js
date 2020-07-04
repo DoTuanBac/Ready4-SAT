@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 import { TouchableOpacity, View,Text } from 'react-native';
-import {Feather, SimpleLineIcons, FontAwesome, Entypo, Fontisto, AntDesign, MaterialCommunityIcons} from '@expo/vector-icons'
+import { Feather, SimpleLineIcons, FontAwesome,Entypo,AntDesign } from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
 import LeaderboardScreen from '../screens/LeaderboardScreen'
 import AnalyticsScreen from '../screens/AnalyticsScreen'
@@ -17,6 +17,7 @@ import VocabListScreen from '../screens/VocabListScreen'
 import MyProfileScreen from "../screens/MyProfileScreen";
 import MyTestScreen from "../screens/MyTestScreen";
 import NewsFeedScreen from "../screens/NewsFeedScreen";
+import ResultScreen from '../screens/ResultScreen'
 import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import RegisterDetailScreen from '../screens/RegisterDetailScreen'
@@ -214,6 +215,14 @@ export default function HomeStack(props) {
       <Stack.Screen
         name="Calculator"
         component={CalculatorScreen}
+      />
+      <Stack.Screen
+        name="Result"
+        component={ResultScreen}
+        options={{
+          title: '',
+          headerStyle: {backgroundColor: '#0E2C3D'}
+        }}
       />
       <Stack.Screen
         name="Learn"

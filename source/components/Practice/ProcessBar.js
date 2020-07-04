@@ -17,14 +17,14 @@ export default function ProcessBar(props){
                     <FlatList
                         data={props.questions}
                         renderItem = {({item}) => (
-                            item.id === props.index ?
+                            item.id === props.indexQuestion ?
                             <View style={styles.indexQuestionContainer}>
                                 <View style={styles.indexQuestion}></View>
                             </View> :
                             item.answer ?
                             <TouchableOpacity
                                 onPress={() => {
-                                    props.setIndex(item.id)
+                                    props.setIndexQuestion(item.id)
                                     props.setQuestion(props.questions.map(element => 
                                         element.id === props.index ? 
                                         {...element, isIndex: true} :
@@ -36,7 +36,7 @@ export default function ProcessBar(props){
                             </TouchableOpacity> : 
                             <TouchableOpacity
                                 onPress={() => {
-                                    props.setIndex(item.id)
+                                    props.setIndexQuestion(item.id)
                                     props.setQuestion(props.questions.map(element => 
                                         element.id === props.index ? 
                                         {...element, isIndex: true} :
