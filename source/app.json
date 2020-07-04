@@ -10,7 +10,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/image.png",
-    "scheme": "Ready4SAT",
+    "scheme": "source",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -27,6 +27,10 @@
     },
     "web": {
       "favicon": "./assets/images/image.png"
+    },
+    "android": {
+      "package": "com.mobileapp.ready4sat",
+      "versionCode": 1
     }
   }
 }
