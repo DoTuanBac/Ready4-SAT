@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     bottom: {
         position: 'absolute',
         bottom:0,
-        backgroundColor: '#0E2C3D',
+        backgroundColor: '#0a566b',
         width: '100%',
         borderBottomEndRadius: 4,
         padding: 10,

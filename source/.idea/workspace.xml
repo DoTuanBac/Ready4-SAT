@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d0e0c25-6ee6-49e5-be4b-daa3ca56452a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/image.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsfeed/BookmarkItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsfeed/BookmarkItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Newsfeed/NewsFeedItemView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newsfeed/NewsFeedItemView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Practice/ProcessBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Practice/ProcessBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Test/TestDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Test/TestDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Vocab/VocabCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Vocab/VocabCategories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/HomeStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/HomeStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/BookmarkedScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/BookmarkedScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/LeaderboardScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LeaderboardScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/PracticeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/PracticeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/TestDetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TestDetailScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +47,15 @@
     </option>
   </component>
   <component name="ProjectId" id="1dxMY6gI7JmFNQyYgBgcv171mjQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -94,27 +101,30 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593420574336">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593420574336" />
-    <state width="1323" height="147" key="GridCell.Tab.0.bottom" timestamp="1593848756350">
+    <state width="1323" height="147" key="GridCell.Tab.0.bottom" timestamp="1593868886744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593848756350" />
-    <state width="1323" height="147" key="GridCell.Tab.0.center" timestamp="1593848756350">
+    <state width="1323" height="147" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593868886744" />
+    <state width="1323" height="147" key="GridCell.Tab.0.center" timestamp="1593868886744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593848756350" />
-    <state width="1323" height="147" key="GridCell.Tab.0.left" timestamp="1593848756349">
+    <state width="1323" height="147" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593868886744" />
+    <state width="1323" height="147" key="GridCell.Tab.0.left" timestamp="1593868886744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593848756349" />
-    <state width="1323" height="147" key="GridCell.Tab.0.right" timestamp="1593848756350">
+    <state width="1323" height="147" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593868886744" />
+    <state width="1323" height="147" key="GridCell.Tab.0.right" timestamp="1593868886744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593848756350" />
+    <state width="1323" height="147" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593868886744" />
     <state x="129" y="55" key="MergeDialog" timestamp="1593848732493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -37,7 +37,7 @@ export default function HomeStack(props) {
             onPress={() => { setVisible(!visible) }}
         >
             <View style={{padding: 20,}}>
-                <Text style={{fontSize: 18, color: '#075769'}}>Official SAT- If you haven't yet signed up for the SAT, you can do so on the https://collegereadiness.collegeboard.org/sat website. Choose your date carefully, and make sure you have as much time as possible to study beforehand.</Text>
+                <Text style={{fontSize: 18, color: '#075769'}}>The leaderboard displays the leaderboards of all people most effectively in SAT.</Text>
             </View>
             <View style={{alignItems: 'flex-end', padding: 10,}}>
                 <View style={{borderRadius:5, marginHorizontal:10, paddingVertical:10, paddingHorizontal:20,backgroundColor:"#f9fafb", marginRight: -5,}}>
@@ -144,7 +144,7 @@ export default function HomeStack(props) {
         component={TestDetailScreen}
         options={{
 
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#0E2C3D'},
           headerTintColor: 'white',
 
           title: '',
@@ -164,7 +164,7 @@ export default function HomeStack(props) {
         component={VocabScreen}
          options={{
 
-              headerStyle: {backgroundColor: '#0a566b'},
+              headerStyle: {backgroundColor: '#0E2C3D'},
               headerTintColor: 'white',
               title: 'Vocabulary',
               headerTitleStyle: {color: 'white', marginLeft: -28,},
@@ -201,7 +201,7 @@ export default function HomeStack(props) {
           name="Bookmarked"
           component={BookmarkedScreen}
           options={{
-              headerStyle: {backgroundColor: '#0a566b'},
+              headerStyle: {backgroundColor: '#0E2C3D'},
               headerTintColor: 'white',
               headerTitleStyle: {color: 'white', marginLeft: -28,},
           }}
@@ -210,7 +210,7 @@ export default function HomeStack(props) {
           name="NewsFeed"
           component={NewsFeedScreen}
           options={{
-            headerStyle: {backgroundColor: '#0a566b'},
+            headerStyle: {backgroundColor: '#0E2C3D'},
             headerTintColor: 'white',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
               headerRight: () =>
@@ -226,7 +226,7 @@ export default function HomeStack(props) {
           name="NewsFeedDetail"
           component={NewsFeedDetailScreen}
           options={{
-              headerStyle: {backgroundColor: '#0a566b'},
+              headerStyle: {backgroundColor: '#0E2C3D'},
               headerTintColor: 'white',
               title: '',
               headerTitleStyle: {color: 'white', marginLeft: -28,},
@@ -257,7 +257,7 @@ export default function HomeStack(props) {
         component={VocabDetailScreen}
         options={{
 
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#0E2C3D'},
 
           title: '',
           headerLeft: () =>
@@ -289,7 +289,7 @@ export default function HomeStack(props) {
         name="VocabHelp"
         component={VocabHelpScreen}
         options={{
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#0E2C3D'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity

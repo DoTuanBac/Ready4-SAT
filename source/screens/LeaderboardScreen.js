@@ -56,11 +56,15 @@ const styles = StyleSheet.create({
         color: '#fff',
         padding: 5,
         fontWeight: 'bold',
+
     },
     open: {
         color: 'red',
         padding: 5,
         fontWeight: 'bold',
+        width: '100%',
+        borderColor: 'red',
+        borderRadius: 1,
     },
     BoxTop: {
         flexDirection: 'row',
