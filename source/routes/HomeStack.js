@@ -50,6 +50,24 @@ export default function HomeStack(props) {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="Introduce"
+        component={IntroduceScreen}
+        options={{
+          headerStyle: {backgroundColor: 'white'},
+          title: '',
+          headerLeft: () =>
+          <View></View>,
+          headerRight: () =>
+            <TouchableOpacity
+             onPress={() =>props.navigation.navigate('Login')}
+              style={{marginRight: 16}}
+            >
+             <Text style={{color:"black", fontWeight:"bold",fontSize:16}}>Log In</Text>
+            </TouchableOpacity>,
+
+          }}
+      />
+      <Stack.Screen
         name="Home"
         component={HomeScreen}
         options={{
@@ -375,24 +393,7 @@ export default function HomeStack(props) {
 
           }}
       />
-        <Stack.Screen
-        name="Introduce"
-        component={IntroduceScreen}
-        options={{
-          headerStyle: {backgroundColor: 'white'},
-          title: '',
-          headerLeft: () =>
-          <View></View>,
-          headerRight: () =>
-            <TouchableOpacity
-             onPress={() =>props.navigation.navigate('Login')}
-              style={{marginRight: 16}}
-            >
-             <Text style={{color:"black", fontWeight:"bold",fontSize:16}}>Log In</Text>
-            </TouchableOpacity>,
-
-          }}
-      />
+       
     </Stack.Navigator>
   );
 }

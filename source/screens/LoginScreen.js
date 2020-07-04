@@ -24,7 +24,9 @@ export default function LoginScreen({navigation}){
       placeholderTextColor="white"
       secureTextEntry={true}
     />
-          <TouchableOpacity style={{  width:'70%',height: 40,borderRadius:4,backgroundColor:'#b5b5b5',marginTop:25,alignItems: 'center',justifyContent:"center"}}  >
+          <TouchableOpacity style={{  width:'70%',height: 40,borderRadius:4,backgroundColor:'#b5b5b5',marginTop:25,alignItems: 'center',justifyContent:"center"}}  
+          onPress={() => navigation.navigate('Home')}
+          >
              <Text style={{color:"white",fontSize:16}}>Login</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{marginTop:10}}  onPress={() => navigation.navigate('Forgot')}>
