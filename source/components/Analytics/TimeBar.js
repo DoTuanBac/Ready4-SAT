@@ -9,7 +9,7 @@ export default function TimeBar(){
         }}>
             <View style={{
                 height: 8,
-                borderBottomColor: '#d3d3d3',
+                borderBottomColor: '#b6c8cc',
                 borderBottomWidth: 1,
             }}>
             </View>
@@ -17,16 +17,17 @@ export default function TimeBar(){
             </View>
             <View style={{
                 width: 32,
-                borderLeftColor: '#d3d3d3',
-                borderRightColor: '#d3d3d3',
+                borderLeftColor: '#b6c8cc',
+                borderRightColor: '#b6c8cc',
                 borderRightWidth: 1,
                 borderLeftWidth: 1,
+                height: 16,
                 alignSelf: 'center',
-               
+                margin: -12,
             }}>
-                <Text style={{color: 'green', fontSize: 12, textAlign: 'center'}}>Goal</Text>
+                <Text style={{color: 'green', fontSize: 12, textAlign: 'center', paddingTop: 15,}}>Goal</Text>
             </View>
-            <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginTop: -16}}>
+            <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginTop: 10}}>
                 <Text style={{color: '#999', fontSize: 12}}>Too Fast</Text>
                 <Text style={{color: '#999', fontSize: 12}}>Too Slow</Text>
             </View>

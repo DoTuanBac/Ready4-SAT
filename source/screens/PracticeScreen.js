@@ -14,7 +14,7 @@ export default function TestDetailScreen({navigation}){
     ]
 
     const [questions, setQuestion] = useState(initQuestions.map(element =>
-        ({...element, answer: ''}) 
+        ({...element, answer: ''})
     ))
     const [indexQuestion, setIndexQuestion] = useState(1)
 
@@ -33,19 +33,19 @@ export default function TestDetailScreen({navigation}){
             ),
             headerRight: () => (
                 <TouchableOpacity>
-                    <Feather 
+                    <Feather
                         name={'bookmark'} size={20} color={'white'}
                         style={{margin: 10}}
                     />
                 </TouchableOpacity>
-                
+
             ),
         });
     }, [navigation])
 
     return(
         <View style={styles.container}>
-            <ProcessBar 
+            <ProcessBar
                 questions = {questions}
                 setQuestion = {setQuestion}
                 setIndexQuestion = {setIndexQuestion}
@@ -56,7 +56,7 @@ export default function TestDetailScreen({navigation}){
                 <View style={styles.questionContainer}>
                     <Text>{questions[indexQuestion -1].title}</Text>
                 </View>
-                <FlatList 
+                <FlatList
                     data = {questions[indexQuestion - 1].options}
                     renderItem = {({item, index}) => (
                         <View style={styles.row}>
@@ -81,7 +81,7 @@ export default function TestDetailScreen({navigation}){
                                         (item === questions[indexQuestion -1].answer) ?
                                         <Text style={{color: '#0E2C3D'}}>{item}</Text> :
                                         <Text>{item}</Text>
-                                    }                                    
+                                    }
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -96,19 +96,19 @@ export default function TestDetailScreen({navigation}){
                     (indexQuestion !== 1) ?
                     <TouchableOpacity onPress={() => {
                         setIndexQuestion(indexQuestion - 1)
-                        setQuestion(questions.map(element => 
-                            element.id === indexQuestion ? 
+                        setQuestion(questions.map(element =>
+                            element.id === indexQuestion ?
                             {...element, isIndex: true} :
                             {...element, isIndex: false}
                         ))
                     }}>
                         <AntDesign name="left" size={20} color="white" />
-                    </TouchableOpacity> : 
+                    </TouchableOpacity> :
                     <TouchableOpacity>
                         <AntDesign name="left" size={20} color='transparent' />
                     </TouchableOpacity>
                 }
-                
+
                 <TouchableOpacity onPress={() => {}}>
                     <AntDesign name="bulb1" size={20} color="white" />
                 </TouchableOpacity>
@@ -123,8 +123,8 @@ export default function TestDetailScreen({navigation}){
                     !(indexQuestion === questions.length) ?
                     <TouchableOpacity onPress={() => {
                         setIndexQuestion(indexQuestion + 1)
-                        setQuestion(questions.map(element => 
-                            element.id === indexQuestion ? 
+                        setQuestion(questions.map(element =>
+                            element.id === indexQuestion ?
                             {...element, isIndex: true} :
                             {...element, isIndex: false}
                         ))
@@ -158,8 +158,8 @@ const styles = StyleSheet.create({
     },
     bottom: {
         position: 'absolute',
-        bottom: 0,
-        backgroundColor: '#0E2C3D',
+        bottom:0,
+        backgroundColor: '#0a566b',
         width: '100%',
         borderBottomEndRadius: 4,
         padding: 10,

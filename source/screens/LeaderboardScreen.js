@@ -6,13 +6,30 @@ import {User} from '../data/user'
 import UserTop from '../components/LeaderBoard/UserTop'
 
 export default function LeaderboardScreen({navigation}) {
+
+    const [isOpen, setOpen] = React.useState(false);
+
     User.sort(function (a, b) {
         return b.points - a.points;
     });
+
     return (
-
-        <LinearGradient style={styles.fullbox} colors={['#0E2C3D', '#14ccff']}>
-
+        <LinearGradient style={styles.fullbox} colors={['#041c38', '#118791']}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-around', width: '100%'}}>
+                <TouchableOpacity>
+                    <Text style={styles.text}>Top Schools</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => setOpen(!isOpen)}>
+                    {
+                        (!isOpen) ?
+                            <Text style={styles.open}>All Time</Text> :
+                            <Text style={styles.text}>All Time</Text>
+                    }
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.text}>Location</Text>
+                </TouchableOpacity>
+            </View>
             <View style={styles.BoxTop}>
                 <TopLeaderBoard top={2} user={User[1]}/>
                 <TopLeaderBoard top={1} user={User[0]}/>
@@ -35,6 +52,20 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
+    text: {
+        color: '#fff',
+        padding: 5,
+        fontWeight: 'bold',
+
+    },
+    open: {
+        color: 'red',
+        padding: 5,
+        fontWeight: 'bold',
+        width: '100%',
+        borderColor: 'red',
+        borderRadius: 1,
+    },
     BoxTop: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -46,26 +77,5 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: 10,
         height: 1,
-    },
-    subHeader: {
-        height: 30,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        width: '90%',
-        marginTop: 10,
-        borderColor: 'white',
-        borderWidth: 1,
-        borderRadius: 8,
-
-    },
-    contentText: {
-        color: 'white',
-    },
-    title: {
-        color: 'white',
-        fontWeight: 'bold',
-        marginTop: 10,
-        fontSize: 40,
     },
 })

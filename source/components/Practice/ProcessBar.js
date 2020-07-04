@@ -3,10 +3,10 @@ import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native
 
 export default function ProcessBar(props){
     return(
-        <View style={styles.container}> 
+        <View style={styles.container}>
             <View style={[styles.questionsContainer, {width: '90%'}]}>
                 {
-                    props.questions.map((element) => 
+                    props.questions.map((element) =>
                         <Text style={styles.questionNum}>{element.id}</Text>
                     )
                 }
@@ -25,20 +25,20 @@ export default function ProcessBar(props){
                             <TouchableOpacity
                                 onPress={() => {
                                     props.setIndexQuestion(item.id)
-                                    props.setQuestion(props.questions.map(element => 
-                                        element.id === props.index ? 
+                                    props.setQuestion(props.questions.map(element =>
+                                        element.id === props.index ?
                                         {...element, isIndex: true} :
                                         {...element, isIndex: false}
                                     ))
                                 }}
                             >
                                 <View style={styles.checkQuestion}></View>
-                            </TouchableOpacity> : 
+                            </TouchableOpacity> :
                             <TouchableOpacity
                                 onPress={() => {
                                     props.setIndexQuestion(item.id)
-                                    props.setQuestion(props.questions.map(element => 
-                                        element.id === props.index ? 
+                                    props.setQuestion(props.questions.map(element =>
+                                        element.id === props.index ?
                                         {...element, isIndex: true} :
                                         {...element, isIndex: false}
                                     ))
@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
     },
     line: {
         width: '100%',
-        borderColor: '#05B5CC', 
-        borderBottomWidth: 1, 
+        borderColor: '#05B5CC',
+        borderBottomWidth: 1,
         position: 'absolute'
     },
     questionsContainer: {

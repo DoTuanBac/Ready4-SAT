@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "source",
+    "name": "Ready4SAT",
     "slug": "source",
     "platforms": [
       "ios",
@@ -9,8 +9,8 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/image.png",
+    "scheme": "source",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -26,7 +26,11 @@
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/image.png"
+    },
+    "android": {
+      "package": "com.mobileapp.ready4sat",
+      "versionCode": 1
     }
   }
 }

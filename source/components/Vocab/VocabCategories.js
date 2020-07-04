@@ -11,9 +11,8 @@ export default function VocabCategories(props){
     return(
         <View  style={styles.fullbox2}>
         <TouchableOpacity  style={styles.box} onPress={() => setCount(count+1)} >
-
             <Text style={styles.basicWord}>{props.item.name}</Text>
-        <Text style={styles.mastered}>{getMasteredCategories(props.item.categories)} Mastered</Text>
+            <Text style={styles.mastered}>{getMasteredCategories(props.item.categories)} Mastered</Text>
             <View style={styles.progressBarContainer}>
                 <ProgressBar borderColor='#0084ad' backgroundColor='#a1e6f0' percent={getPercentCategories(props.item.categories)}/>
             </View>
@@ -25,23 +24,19 @@ export default function VocabCategories(props){
                     keyExtractor={item => item.id}
                   />
             </View>
-
         </TouchableOpacity>
         </View>
     );
+
     if(count%2===0)
     return(
         <View  style={styles.fullbox1}>
         <TouchableOpacity  style={styles.box2} onPress={() => setCount(count+1)} >
-
             <Text style={styles.basicWord2}>{props.item.name}</Text>
             <Text style={styles.mastered2}>{getMasteredCategories(props.item.categories)} Mastered</Text>
             <View style={styles.progressBarContainer}>
                 <ProgressBar borderColor='#a1e6f0' backgroundColor='#a1e6f0' percent={getPercentCategories(props.item.categories)}/>
             </View>
-
-
-
         </TouchableOpacity>
         </View>
     );
@@ -73,7 +68,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding:30,
-        backgroundColor: '#0a566b',
+        backgroundColor: '#0E2C3D',
         width:'100%',
     },
     box2: {

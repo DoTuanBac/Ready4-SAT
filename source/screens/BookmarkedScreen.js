@@ -1,24 +1,22 @@
 import React from 'react'
 import {View, Text, FlatList, StyleSheet} from 'react-native'
 import BookmarkItem from "../components/Newsfeed/BookmarkItem";
+import {NewsFeed} from "../data/newsfeed";
+import NewsFeedItemView from "../components/Newsfeed/NewsFeedItemView";
 
 export default function BookmarkedScreen(props){
-    const item = [
-        {id: 1, schoolName:'Trường đại học...', date:'12/06/2020', title: 'Trường đại học..........'},
-        {id: 2, schoolName:'Trường đại học...', date:'12/06/2020', title: 'Trường đại học..........'},
-        {id: 3, schoolName:'Trường đại học...', date:'12/06/2020', title: 'Trường đại học..........'},
-        {id: 4, schoolName:'Trường đại học...', date:'12/06/2020', title: 'Trường đại học..........'},
-    ];
     return(
         <View style={styles.container}>
             <FlatList
-                data={item}
+                data={NewsFeed}
                 renderItem={({ item }) =>
                     <BookmarkItem
                         navigation={props.navigation}
+                        imageSource={item.imageSource}
                         schoolName={item.schoolName}
                         date={item.date}
                         title={item.title}
+                        content={item.content}
                         route={item.id}
                     />}
                 keyExtractor={item => item.id}

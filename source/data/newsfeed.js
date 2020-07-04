@@ -11,7 +11,7 @@ export const NewsFeed = [
             "For example the J&Y Law offers a $1,000 scholarship for college freshmen. It's called the Defense Against Distracted Driving Scholarship. This is nonrenewable, meaning you’ll receive it once during your college career, as opposed to each year you enroll. To qualify, you must write an essay that details how you handle distracted driving. There is one recipient for this annual award.\n" +
             "\n" +
             "You can also look into the Free Application for Federal Student Aid (FAFSA). This form can help you qualify for additional student aid from the federal government. Your state may also consider FAFSA when it comes to who is eligible and how much each person should receive.",
-        imageSource: 'https://tedideas.files.wordpress.com/2019/04/featured_art_awan_speedreading.jpg?w=750',
+        imageSource: 'https://www.studying-in-germany.org/wp-content/uploads/2013/01/Germany-School-System.jpg',
         bookmark: false,
     },
     {
@@ -24,7 +24,7 @@ export const NewsFeed = [
             "While this may seem like it’s about grammar rather than vocabulary, it’s actually not. In the College Board’s words,\n" +
             "\n" +
             "“It’s worth noting here that these language use questions aren’t directly about grammar, usage, or mechanics. Instead, these questions try to get you to think about how language should be used to accomplish particular writerly aims, such as being clearer, more precise, or more economical.”",
-        imageSource: 'https://tedideas.files.wordpress.com/2019/04/featured_art_awan_speedreading.jpg?w=750',
+        imageSource: 'https://blog.prepscholar.com/hs-fs/hubfs/body_alphabet_blank_card.jpg?width=500&name=body_alphabet_blank_card.jpg',
         bookmark: false,
     },
     {
@@ -33,28 +33,28 @@ export const NewsFeed = [
         date: "Mach 22, 2020",
         title: "6 ways college is different from high school",
         content:"It's hard to know what college is really like until you get there. And in these uncertain times, college life might be even more difficult to imagine. But no matter when or where your freshman year begins -- at home, on campus, or some combination of the two -- college will be different from high school in these important ways.\n" +
-            "1. Time in college is managed by you, not the school.\n" +
+            "1. Time in college is managed by you, not the school.\n\n\n" +
             "One of the biggest challenges for new college freshmen is time management. Most students are surprised by the amount of \"free\" time they have compared to their lives in high school. In college, you may have three classes one day, and none the next. You might be tempted to kick back, but it's up to you to balance studying and coursework with socializing and other pursuits. \n" +
-            "\n" +
+            "\n\n" +
             "2. College professors expect you to learn and think independently.\n" +
             "As a college freshman, you will be responsible for your learning. You’ll be expected to cover course material on your own with less hand-holding by professors and instructors than you might have experienced in high school. It’s common for some professors to assign material not covered in lectures (and to include that material in exams) and to call on you to explain readings, contribute to discussions, and debate key points.\n" +
             "\n" +
             "At the same time, college professors are there to help and they want you to succeed. However, you will need to be proactive and reach out to them. It will be up to you to email instructors and visit their office hours, and to seek out academic services at the college, such as tutoring or study groups. Many of the students featured in CollegeData’s Road to College Student stories say that attending office hours and taking advantage of their college’s academic resources helped them succeed.\n" +
-            "\n" +
+            "\n\n" +
             "3. Cramming at the last minute doesn't work.\n" +
             "Some high school students are successful with last-minute studying. But exams in college are generally given less frequently, cover more material and are more difficult than high school tests. College exams often require in-depth and thoughtful answers that demonstrate your mastery of the content. As many freshmen learn the hard way, this means you need to consistently keep up with your studies and coursework and not wait until the last minute to study for a test.\n" +
-            "\n" +
+            "\n\n" +
             "4. Your social life is wide open.\n" +
             "If you are living on campus or away from home, you may feel like a bird let out of a cage when you arrive on campus. You’ll meet many new people—and you’ll be able to do what you want when you want. But with this new freedom comes the responsibility to set priorities and boundaries, including balancing studying and course work with non-academic pursuits.\n" +
-            "\n" +
+            "\n\n" +
             "5. You might be sharing a (very small) personal space with a stranger.\n" +
             "Even if you're used to sharing a room with a sibling, living with someone you’ve never met can be a challenge. You'll need to negotiate everything from \"lights out\" time to what's considered “personal space” and \"neat.\" Your roommate may not be your best friend. However, a roommate can be a familiar face as you settle into college.\n" +
-            "\n" +
+            "\n\n" +
             "6. From money to moods, you'll be responsible for taking care of yourself.\n" +
             "Like many students facing a new and unfamiliar experience, you might hit some rough patches in college. It might be difficult to make friends, or you might be disappointed in your course grades. It’s easy to over-extend yourself socially or make mistakes managing your money. Many college freshmen come to a point where they may need to assess their priorities, and in some cases, make some changes.\n" +
             "\n" +
             "Fortunately, most colleges provide resources to help students adjust to college life. These include health care professionals, mental health services, and academic and career counselors. But taking steps to get on track will be up to you.",
-        imageSource: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx1Z5DakiwWT_mKDvJ6tSiZ57shOBR0ne6eA&usqp=CAU',
+        imageSource: 'https://storage.googleapis.com/hola-edu-media/images/626351323-1559555799612-satii-01.jpg',
         bookmark: false,
     },
     {

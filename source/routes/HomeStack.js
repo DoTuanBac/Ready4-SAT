@@ -1,7 +1,7 @@
 import React from 'react';
-import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
-import { TouchableOpacity, View,Text } from 'react-native';
-import {Feather, SimpleLineIcons, FontAwesome, Entypo, Fontisto, AntDesign, MaterialCommunityIcons} from '@expo/vector-icons'
+import { createStackNavigator } from '@react-navigation/stack';
+import {TouchableOpacity, View, Text, Modal} from 'react-native';
+import { Feather, SimpleLineIcons, FontAwesome, Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 import HomeScreen from '../screens/HomeScreen'
 import LeaderboardScreen from '../screens/LeaderboardScreen'
 import AnalyticsScreen from '../screens/AnalyticsScreen'
@@ -29,6 +29,24 @@ import BookmarkedScreen from "../screens/BookmarkedScreen";
 const Stack = createStackNavigator();
 
 export default function HomeStack(props) {
+    const [visible, setVisible] = React. useState(false);
+
+    const modalOfficial = (
+        <TouchableOpacity
+            style={{backgroundColor:"#f9fafb", width:"80%", borderRadius:2, marginBottom: 50,}}
+            onPress={() => { setVisible(!visible) }}
+        >
+            <View style={{padding: 20,}}>
+                <Text style={{fontSize: 18, color: '#075769'}}>The leaderboard displays the leaderboards of all people most effectively in SAT.</Text>
+            </View>
+            <View style={{alignItems: 'flex-end', padding: 10,}}>
+                <View style={{borderRadius:5, marginHorizontal:10, paddingVertical:10, paddingHorizontal:20,backgroundColor:"#f9fafb", marginRight: -5,}}>
+                    <Text style={{color: '#05B5CC'}}>GOT IT!</Text>
+                </View>
+            </View>
+        </TouchableOpacity>
+    );
+
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -71,11 +89,24 @@ export default function HomeStack(props) {
         name="Leaderboard"
         component={LeaderboardScreen}
         options={{
-            headerStyle: {backgroundColor: '#0E2C3D'},
+            headerStyle: {backgroundColor: '#042538'},
             headerTintColor: 'white',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
+            headerRight: () =>
+                <TouchableOpacity style={{marginRight: 16}} onPress={()=> setVisible(!visible)}>
+                    <AntDesign name='question' size={24} color={'white'}/>
+                    <Modal
+                        transparent={true}
+                        visible={visible}
+                    >
+                        <View style={{backgroundColor:"#00000099", flex:1, alignItems: 'center', justifyContent: 'center',}}>
+                            <View>
+                                {modalOfficial}
+                            </View>
+                        </View>
+                    </Modal>
+                </TouchableOpacity>,
         }}
-
       />
       <Stack.Screen
         name="Analytics"
@@ -101,8 +132,7 @@ export default function HomeStack(props) {
         name="Test"
         component={TestScreen}
         options={{
-
-            headerStyle: {backgroundColor: '#0a566b'},
+            headerStyle: {backgroundColor: '#0E2C3D'},
             headerTintColor: 'white',
             title: '',
             headerTitleStyle: {color: 'white', marginLeft: -28,}
@@ -114,16 +144,14 @@ export default function HomeStack(props) {
         component={TestDetailScreen}
         options={{
 
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#0E2C3D'},
           headerTintColor: 'white',
-
           title: '',
           headerTitleStyle: {color: 'white', marginLeft: -28,},
             headerRight: () =>
             <TouchableOpacity   onPress={() =>props.navigation.navigate('VocabHelp')}>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
-
-              <Text   style={{marginRight: 16,color:"white",fontSize:16,}}>00:00</Text>
+                  <Entypo  style={{marginRight: 16}} name="info" size={16} color="white" />
               </View>
               </TouchableOpacity>
 
@@ -134,7 +162,7 @@ export default function HomeStack(props) {
         component={VocabScreen}
          options={{
 
-              headerStyle: {backgroundColor: '#0a566b'},
+              headerStyle: {backgroundColor: '#0E2C3D'},
               headerTintColor: 'white',
               title: 'Vocabulary',
               headerTitleStyle: {color: 'white', marginLeft: -28,},
@@ -151,7 +179,7 @@ export default function HomeStack(props) {
         name="MyProfile"
         component={MyProfileScreen}
         options={{
-            headerStyle: {backgroundColor: '#0E2C3D'},
+            headerStyle: {backgroundColor: '#042538'},
             headerTintColor: 'white',
             title: 'My Profile',
             headerTitleStyle: {color: 'white', marginLeft: -28,},
@@ -227,7 +255,7 @@ export default function HomeStack(props) {
         component={VocabDetailScreen}
         options={{
 
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#0E2C3D'},
 
           title: '',
           headerLeft: () =>
@@ -259,7 +287,7 @@ export default function HomeStack(props) {
         name="VocabHelp"
         component={VocabHelpScreen}
         options={{
-          headerStyle: {backgroundColor: '#0a566b'},
+          headerStyle: {backgroundColor: '#0E2C3D'},
           title: '',
           headerLeft: () =>
             <TouchableOpacity
@@ -275,16 +303,10 @@ export default function HomeStack(props) {
         name="VocabList"
         component={VocabListScreen}
         options={{
-          headerStyle: {backgroundColor: '#082e38'},
-          title: '',
-          headerLeft: () =>
-            <TouchableOpacity
-              onPress={() => props.navigation.goBack()}
-              style={{marginLeft: 16}}
-            >
-             <Text style={{color:"white", fontWeight:"bold",fontSize:16}}>Back</Text>
-            </TouchableOpacity>,
-          }}
+            headerStyle: {backgroundColor: '#0a566b'},
+            headerTintColor: 'white',
+            title: '',
+        }}
       />
 
 

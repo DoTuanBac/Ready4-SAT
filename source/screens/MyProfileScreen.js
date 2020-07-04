@@ -1,29 +1,21 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput, Image,TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TextInput, Image, TouchableOpacity, Platform} from 'react-native'
 import {LinearGradient} from "expo-linear-gradient";
 import { AntDesign } from '@expo/vector-icons';
-import {Profile} from "../data/profile";
-
-
-
-
-
+import DateTimePicker from "@react-native-community/datetimepicker";
 
 export default function MyProfileScreen(props){
     const [value, onChangeText] = React.useState('Mai V');
-    const [user] = React.useState(Profile);
+    //const [user, setUser] = React.useState(Profile);
     const [score, setScore] = React.useState(1390);
-    const [date, setDate] = React.useState('Jul 14, 2020s');
+    const [date, setDate] = React.useState(new Date());
+    const [show, setShow] = React.useState(false);
 
-    let index = 0;
-    const data = [
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-        {key: index++, score: 1350},
-    ]
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow(Platform.OS === 'ios');
+        setDate(currentDate);
+    };
 
     const handleGoToMyTest = React.useCallback(()=> {
         props.navigation.navigate('MyTest');
@@ -31,7 +23,7 @@ export default function MyProfileScreen(props){
 
     return(
 
-        <LinearGradient style={styles.container} colors={['#0E2C3D', '#14ccff']}>
+        <LinearGradient style={styles.container} colors={['#041c38', '#118791']}>
 
             <View style={styles.profile}>
                 <View>
@@ -43,16 +35,16 @@ export default function MyProfileScreen(props){
                     </View>
                 </View>
                 <View style={{margin: 6}}>
-                    <Text style={{color: '#e5e5e5'}}>Type Display Name</Text>
+                    <Text style={{color: '#adb2b8', paddingTop: 15, fontSize: 13.5}}>Type Display Name</Text>
                 </View>
                 <TextInput
-                  
+
                   style={styles.name}
                   onChangeText={text => onChangeText(text)}
                   value={value}
               />
             </View>
-           
+
             <View style={styles.profileDetail}>
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>Email</Text>
@@ -64,16 +56,23 @@ export default function MyProfileScreen(props){
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail} onPress={handleGoToMyTest}>
                     <Text style={styles.label}>My Tests</Text>
-                    <Text style={styles.value}>{user.myTest}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.detail}>
+                <TouchableOpacity style={styles.detail} onPress={()=> setShow(!show)}>
                     <Text style={styles.label}>Test Date</Text>
-                    <Text style={styles.value}>{date}</Text>
+                    <Text style={styles.value}>{date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()}</Text>
+
+                    {show && (
+                        <DateTimePicker
+                            value={date}
+                            mode="date"
+                            display="default"
+                            onChange={onChange}
+                        />
+                    )}
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>Desired Score</Text>
                     <Text style={styles.value}>{score}</Text>
-                    {/*<AntDesign name="right" size={24} color="white" />*/}
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.detail}>
                     <Text style={styles.label}>My Schools</Text>
@@ -93,7 +92,7 @@ export const styles = StyleSheet.create({
         flex: 1,
     },
     profile: {
-        margin: 10,
+        margin: 5,
         alignItems: 'center',
         marginBottom: 20,
     },
@@ -101,9 +100,10 @@ export const styles = StyleSheet.create({
     },
     perContainer: {
         margin: 10,
+        marginBottom: 15,
     },
     percent: {
-        color: '#fff',
+        color: '#adb2b8',
         alignContent: 'center',
         paddingLeft: 26.5,
     },
@@ -119,17 +119,20 @@ export const styles = StyleSheet.create({
     },
     name: {
         height: 30,
+        paddingLeft: 50,
+        paddingRight: 50,
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
         color: 'white',
         textAlign: 'center',
-        fontSize:20,
-       
+        fontSize:16,
     },
     detail: {
-
         flexDirection: 'row',
-        padding: 11,
+        paddingTop: 17.5,
+        paddingRight: 15,
+        paddingLeft: 15,
+        paddingBottom: 17.5,
         justifyContent: 'space-between',
         alignItems: 'center',
         borderBottomColor: '#d3d3d3',
@@ -137,16 +140,16 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     label: {
-        color: '#0ac8fc',
+        color: '#29d5e3',
     },
     value: {
-        color: '#0ac8fc',
-        fontSize: 14,
+        color: '#29d5e3',
     },
     schoolIcon: {
-        height: 30,
-        width: 30,
+        height: 32,
+        width: 32,
         borderRadius: 100,
-        //marginBottom: 5,
+        marginTop: -20,
+        marginBottom: -20,
     }
 });
