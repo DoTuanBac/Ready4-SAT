@@ -10,18 +10,30 @@ export default function VocabHelp(){
         <TouchableOpacity onPress={() => setCount(count+1)}  style={styles.box}>
           <Text style={styles.word} >Welcome to Ready4's{'\n'}Sat Vocabulary Practice</Text>
           <View style={{marginTop:25,}}>
-               <Text style={styles.adj}>
-                   <AntDesign name="checkcircleo" size={24}  />
-                   Study hundreds of Sat vocabulary words
-               </Text>
-               <Text style={styles.adj}>
-                   <AntDesign name="checkcircleo" size={24}  />
-                   Learn from in-depth definitions and tips
-               </Text>
-               <Text style={styles.adj}>
-                   <AntDesign name="checkcircleo" size={24}  />
-                   Master new words quickly
-               </Text>
+              <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'flex-end'}}>
+                  <Text style={styles.adj}>
+                      <AntDesign name="checkcircleo" size={24}  />
+                  </Text>
+                  <Text style={{marginLeft: 10, fontSize:15, color:'#cdccd5',}}>
+                      Study hundreds of Sat vocabulary words
+                  </Text>
+              </View>
+               <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'flex-end'}}>
+                   <Text style={styles.adj}>
+                       <AntDesign name="checkcircleo" size={24}  />
+                   </Text>
+                   <Text style={{marginLeft: 10, fontSize:15, color:'#cdccd5',}}>
+                       Learn from in-depth definitions and tips
+                   </Text>
+               </View>
+              <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'flex-end'}}>
+                  <Text style={styles.adj}>
+                      <AntDesign name="checkcircleo" size={24}  />
+                  </Text>
+                  <Text style={{marginLeft: 10, fontSize:15, color:'#cdccd5',}}>
+                      Master new words quickly
+                  </Text>
+              </View>
            </View>
           <Text style={styles.tap}>Tap to get stared</Text>
         </TouchableOpacity>

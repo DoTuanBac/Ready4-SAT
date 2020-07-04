@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text,StyleSheet } from 'react-native'
-import Avatar from "../Home/Avatar";
+import Avatar from "./Avatar";
 export default function TopLeaderBoard(props){
     function getSize(top) {
         if(top===1) return 100;

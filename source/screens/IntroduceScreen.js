@@ -2,16 +2,14 @@ import React, {useRef}  from 'react'
 import { View, Text,StyleSheet,TouchableOpacity,Image } from 'react-native'
 
 export default function IntroduceScreen({navigation}){
- 
+
 
     return(
         <View style={styles.fullbox}>
-      <Image style={styles.image}   source={
-        require('../assets/images/introduce.jpg')
-         }></Image>
-
-<TouchableOpacity style={styles.bottom}  onPress={() => navigation.navigate('Register')}><Text style={{color:'white'}}>Register</Text></TouchableOpacity>
-
+            <Image style={styles.image}   source={require('../assets/images/introduce.jpg')}/>
+            <TouchableOpacity style={styles.bottom}  onPress={() => navigation.navigate('Register')}>
+                <Text style={{color:'white'}}>Register</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -20,7 +18,7 @@ export default function IntroduceScreen({navigation}){
 const styles = StyleSheet.create({
     fullbox:
     {
-        flex: 1, 
+        flex: 1,
 
         alignItems: 'center',
         backgroundColor:"white",
@@ -35,9 +33,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#0084ad',
         width:'100%',
         padding:10,
-
-        alignItems: 'center',
-
     },
     image:
     {

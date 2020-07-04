@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
 import Score from '../components/Home/Score'
 import Analysis from '../components/Analytics/Analysis'
 import { AntDesign, SimpleLineIcons, MaterialCommunityIcons } from '@expo/vector-icons'
@@ -13,6 +13,7 @@ export default function AnalyticsScreen({navigation}){
                 math='450'
                 rnw='450'
             />
+
             <Analysis
                 navigation={navigation}
                 name={'Writing'}
@@ -62,8 +63,11 @@ export default function AnalyticsScreen({navigation}){
                     style={{marginHorizontal: 10}}
                 />
             </Analysis>
+
         </View>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+})

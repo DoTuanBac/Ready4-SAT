@@ -6,7 +6,7 @@ export default function ForgotScreen(){
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
     return(
-        <LinearGradient style={styles.fullbox}   colors={[ '#0a566b','#14ccff']}> 
+        <LinearGradient style={styles.fullbox}   colors={[ '#082e38','#118cad']}> 
         <Text style={{color:'white',fontSize:20,fontWeight:"bold",marginTop:35}}>Forgot password?</Text>
         <TextInput
       style={{ width:'70%',height: 40, borderBottomColor: 'white',color:'white', borderBottomWidth: 1 }}
